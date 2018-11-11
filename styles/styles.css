@@ -26,6 +26,10 @@ a {
   padding-left: 20px;
 }
 
+.logo a:hover {
+  text-decoration: none;
+}
+
 .searchbar {
   margin-left: 100px;
   overflow: hidden;
@@ -49,7 +53,7 @@ a {
   width: 5%;
   background-color: #398EF2;
   border: none;
-  height: 25px;
+  height: 23px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   color: white;
@@ -63,7 +67,8 @@ a {
 
 .background {
   content: "";
-  background: url(../pics/background.jpg);
+  background-image: url(../pics/background.jpg);
+  height: 2000px;
   opacity: 0.10;
   top: 0;
   left: 0;
@@ -71,10 +76,6 @@ a {
   right: 0;
   position: absolute;
   z-index: -1;
-}
-
-.userycart {
-  overflow:hidden;
 }
 
 .user, .cart {
@@ -87,11 +88,36 @@ a {
   margin: 10px;
   text-align: center;
   font-size: 30px;
+  cursor: pointer;
 }
 
-.cart i, .user i {
-  position: relative;
-  top: 5px;
+.dropuser {
+  cursor: pointer;
+}
+
+.dropdown-menu.show {
+margin-top: 33px;
+}
+
+.cart.show .dropdown-menu.show {
+  margin-top: 24px;
+}
+
+#dropdownText {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Gotham-Light', sans-serif;
+  display: flex;
+  height: 40px;
+  width: 0px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-top: 15px;
+}
+
+.dropdown {
+  float: left;
 }
 
 .carousel {
@@ -113,7 +139,7 @@ a {
 }
 
 
-.cont1, .cont2 {
+.icon, .desc {
   float: left;
   margin: 20px;
 }
@@ -126,8 +152,31 @@ a {
   margin-bottom: 0;
 }
 
-.cont1 {
+.links-section .icon {
   padding-top: 10px;
   position: relative;
   left: 25px;
+}
+
+.special {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  margin: 150px auto 50px auto;
+  width: 70%;
+}
+
+.top-categories img {
+  width: 90%;
+  margin: 10px;
+}
+
+.top-categories {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  margin: 50px auto 50px auto;
+  width: 80%;
 }
