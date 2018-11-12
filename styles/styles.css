@@ -68,7 +68,7 @@ a {
 .background {
   content: "";
   background-image: url(../pics/background.jpg);
-  height: 2000px;
+  height: 2350px;
   opacity: 0.10;
   top: 0;
   left: 0;
@@ -158,12 +158,72 @@ margin-top: 33px;
   left: 25px;
 }
 
+.top-products {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.product-container {
+  width: 225px;
+  height: 385px;
+  margin: 150px auto 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border: 1px solid white;
+}
+
+.product-container:hover {
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+}
+
+.cover {
+  width: 100%;
+}
+
+.cover img {
+  width: 100%;
+}
+
+.buynow {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.buynow input{
+  border: none ;
+  border-bottom: 1px solid red;
+  margin: 5px 30px;
+  outline: none;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: red;
+}
+
+.buynow input:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.price {
+  margin: 0 auto;
+  font-size: 28px;
+  font-family: 'Roboto Condensed';
+}
+
+
 .special {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   justify-content: center;
-  margin: 150px auto 50px auto;
+  margin: 100px auto 50px auto;
   width: 70%;
 }
 
@@ -179,4 +239,71 @@ margin-top: 33px;
   justify-content: center;
   margin: 50px auto 50px auto;
   width: 80%;
+}
+
+footer {
+  background-color: rgba(12, 12, 12, 1);
+  margin-top: 100px;
+  width: 100%;
+  z-index: 2;
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+
+.footer-column2, .footer-column3 {
+  float: left;
+  color: white;
+  width: 20%;
+  padding: 100px 0px;
+}
+
+.footer-column1, .footer-column4 {
+  float: left;
+  color: white;
+  width: 30%;
+  padding: 50px 100px;
+}
+
+.footer-column4 i {
+  font-size: 36px;
+  letter-spacing: 10px;
+  padding: 20px;
+}
+
+footer .logo {
+  opacity: 0.7;
+}
+
+.social-media {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.social-media i {
+  font-size: 36px;
+  margin-left: 10px;
+  letter-spacing: 10px;
+}
+
+li {
+  list-style-type: simp-chinese-formal;
+  font-family: 'Roboto';
+}
+
+.footer-column4 li {
+  list-style-type: none;
+}
+
+.rights {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 50px auto 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
 }
