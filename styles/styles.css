@@ -182,10 +182,17 @@ margin-top: 33px;
 
 .cover {
   width: 100%;
+  position: relative;
 }
 
 .cover img {
   width: 100%;
+}
+
+#newitem {
+  width: 58px;
+  position: absolute;
+  top: -4px;
 }
 
 .buynow {
