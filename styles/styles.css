@@ -12,11 +12,12 @@ a {
   display: flex;
   width: 100%;
   background-color: #0E0101;
-  height: 80px;
+
   position: fixed;
   align-items: center;
   justify-content: space-around;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .logo a {
@@ -122,7 +123,7 @@ margin-top: 33px;
 
 .carousel {
   position: relative;
-  top: 40px;
+  top: 35px;
 }
 
 .links-section {
@@ -163,6 +164,13 @@ margin-top: 33px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.product-row {
+  display: inline-flex;
+  width: 50%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .product-container {
@@ -313,4 +321,85 @@ li {
   margin: 50px auto 0px auto;
   text-align: center;
   padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1710px) {
+
+    .top-products {
+      margin-top: 50px;
+    }
+
+  .product-container {
+    margin: 50px auto 0px auto
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+  footer, footer label {
+    font-size: 12px;
+  }
+
+  footer h3 {
+    font-size: 16px;
+  }
+
+  footer .fas, footer .fab {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  #dropdownText {
+    display:none;
+  }
+
+  .footer-column2, .footer-column3 {
+    display:none;
+  }
+
+  .footer-column1, .footer-column4 {
+    width: 50%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+
+  .searchbar {
+    width: 100%;
+    margin: 10px 0px 10px 30px;
+    align-items: center;
+  }
+
+  .user, .cart {
+    display: none;
+  }
+
+  .carousel {
+    top: 45px;
+  }
+
+  .product-row {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer-column1, .footer-column4 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 532px) {
+  .links-section {
+    font-size: 11px;
+    margin: 10px auto;
+  }
+
+  .searchbar #submit {
+    font-size: 10px;
+  }
 }
