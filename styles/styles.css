@@ -403,3 +403,182 @@ li {
     font-size: 10px;
   }
 }
+
+/* LOGIN STYLES HERE*/
+
+.main-login {
+  height: 800px;
+}
+
+.login-box{
+  width: 350px;
+  height: 420px;
+  background: #0E0101;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 20px 30px 0 30px;
+  border-radius: 10px;
+}
+
+.login-box .logos {
+ top: 50px;
+
+}
+.login-box h1 {
+  margin: 0;
+  padding: 25px 0 20px;
+  text-align: center;
+  font-size: 22px;
+
+
+}
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+
+}
+
+.login-box input{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 6px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: #fff ;
+  outline: none;
+  height: 40px;
+  color: #000;
+  font-size: 16px;
+
+}
+.login-box input[type="submit" ]{
+  border: none ;
+  border-bottom: 1px solid red;
+  outline: none;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: red;
+
+
+}
+.login-box a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+
+}
+.login-box a:hover {
+  color: #fff;
+
+}
+.login-box input[type="submit"]:hover  {
+  color: #fff;
+  background-color: #F92819;
+  cursor: pointer;
+}
+
+.background-login {
+  content: "";
+  background-image: url(../pics/background.jpg);
+  height: 100%;
+  opacity: 0.10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+
+
+/* REGISTER STYLES HERE*/
+
+.main-register {
+  width: 30%;
+  height: 800px;
+  position: relative;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register {
+  border: 1px solid #398EF2;
+  border-radius: 30px;
+  padding: 17px;
+  background-color: rgba(12, 12, 12, 1);
+}
+
+#register-text {
+  color: white;
+  text-align: center;
+}
+
+
+.register input{
+  color: rgb(15, 84, 221);
+  border: 1px solid #398EF2;
+  padding: 8px;
+  border-radius: 5px;
+}
+.register label{
+  color: white;
+}
+
+.form-items{
+  margin-top:25px;
+  margin-left: 160px;
+  width: 70%;
+}
+input.form-items{
+  margin-top: 40px;
+  margin-left: 100px;
+}
+/*
+.form-items-birthday{
+  margin-top: 40px;
+  margin-left: 153px;
+}
+
+input.form-items-birthday{
+  border: 1px solid #398EF2;
+} */
+
+.form-items-agree{
+  margin-left: 55px;
+  margin-top: 40px;
+  margin-left: 123px;
+  font-family: 'Anton';
+}
+
+
+#register-submit:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+  cursor: pointer;
+  /* border-radius: 2px; */
+}
+
+#register-submit {
+  width: 300px;
+  background-color: rgba(190, 0, 0, 0.9);
+  color: white;
+  padding: 6px;
+  border-color: rgba(255, 0, 0, 0.7);
+  font-family: 'Anton';
+}
