@@ -92,6 +92,10 @@ a {
   cursor: pointer;
 }
 
+.user a:hover {
+  color: white;
+}
+
 .dropuser {
   cursor: pointer;
 }
