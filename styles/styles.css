@@ -581,8 +581,14 @@ height: 700px;
   text-align: center;
 }
 
+/* #logo-register {
+  margin-left: 36.5%;
+} */
+/* #form-logo a {
+  margin-left: 37%;
+} */
 #form-logo {
-  margin-left: 35%;
+  text-align: center;
 }
 
 .register input{
@@ -590,15 +596,16 @@ height: 700px;
   border: 1px solid #398EF2;
   padding: 8px;
   border-radius: 5px;
+
 }
 .register label{
   color: white;
 }
 
 .form-items{
-  margin-top: 5%;
-  margin-left: 31%;
-  width: 70%;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
 }
 
 
@@ -633,7 +640,7 @@ height: 700px;
     width: 100%;
   } */
   .register {
-    width: 100%;
+    width: 90%;
   }
 
 }
