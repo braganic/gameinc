@@ -69,7 +69,7 @@ a {
 .background {
   content: "";
   background-image: url(../pics/background.jpg);
-  height: 2350px;
+  height: 2500px;
   opacity: 0.10;
   top: 0;
   left: 0;
@@ -135,7 +135,8 @@ margin-top: 33px;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  margin: 30px auto;
+  margin: 50px auto;
+  margin-bottom: 80px;
   position: relative;
   top: 80px;
   justify-content: space-between;
@@ -171,7 +172,7 @@ margin-top: 33px;
 }
 
 .product-row {
-  display: inline-flex;
+  display: flex;
   width: 50%;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -329,8 +330,16 @@ li {
 
 @media only screen and (max-width: 1710px) {
 
+    .background {
+      height: 2800px;
+    }
+
     .top-products {
       margin-top: 50px;
+    }
+
+    .product-row {
+      width: 100%;
     }
 
   .product-container {
@@ -339,6 +348,15 @@ li {
 }
 
 @media only screen and (max-width: 1450px) {
+
+  .background {
+    height: 2990px;
+  }
+
+  .links-section {
+    width: 97%;
+  }
+
   footer, footer label {
     font-size: 12px;
   }
@@ -353,8 +371,18 @@ li {
 }
 
 @media only screen and (max-width: 1150px) {
+
+
+  .background {
+    height: 3430px;
+  }
+
   #dropdownText {
     display:none;
+  }
+
+  .links-section {
+    width: 50%
   }
 
   .footer-column2, .footer-column3 {
@@ -369,7 +397,11 @@ li {
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 880px) {
+
+  .background {
+    height: 5430px;
+  }
 
   .searchbar {
     width: 100%;
@@ -385,10 +417,16 @@ li {
     top: 45px;
   }
 
+  .links-section {
+    width: 80%;
+  }
+
   .product-row {
-    display: flex;
+    display: block;
     width: 100%;
   }
+
+
 
   .footer-column1, .footer-column4 {
     width: 100%;
@@ -398,9 +436,14 @@ li {
 }
 
 @media only screen and (max-width: 532px) {
+
+  .background {
+    height: 4850px;
+  }
+
   .links-section {
     font-size: 11px;
-    margin: 10px auto;
+    margin: 30px auto;
   }
 
   .searchbar #submit {
@@ -411,10 +454,11 @@ li {
 /* LOGIN STYLES HERE*/
 
 .main-login {
-  height: 800px;
+height: 700px;
 }
 
 .login-box{
+  margin-top: 50px;
   width: 350px;
   height: 420px;
   background: #0E0101;
