@@ -558,9 +558,9 @@ height: 700px;
 
 .main-register {
   width: 100%;
-  height: 650px;
+  height: 570px;
   position: relative;
-  top: 140px;
+  top: 130px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -570,7 +570,7 @@ height: 700px;
   border-radius: 30px;
   padding: 17px;
   background-color: rgba(12, 12, 12, 1);
-  height: 530px;
+  height: 470px;
   width: 43%;
   margin-left: auto;
   margin-right: auto;
@@ -596,7 +596,7 @@ height: 700px;
 }
 
 .form-items{
-  margin-top: 7%;
+  margin-top: 5%;
   margin-left: 31%;
   width: 70%;
 }
@@ -605,7 +605,7 @@ height: 700px;
 .form-items-agree{
   margin-left: 26.5%;
   width: 60%;
-  margin-top: 10%;
+  margin-top: 8%;
   font-family: 'Anton';
 }
 
@@ -620,7 +620,7 @@ height: 700px;
 #register-submit {
   width: 60%;
   margin-left: 20%;
-  margin-top: 9.5%;
+  margin-top: 6%;
   background-color: rgba(190, 0, 0, 0.9);
   color: white;
   padding: 6px;
