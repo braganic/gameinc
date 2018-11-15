@@ -48,7 +48,9 @@
       <section class="main-register">
 
          <form action="index.html" method="post" class="register">
-           <h2 id="register-text">Registro</h2>
+           <div class="logo" id="form-logo">
+        <a href="#">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+      </div>
           <div class="form-items">
            <!-- <label class="name"for="name">Name</label> -->
               <br>
@@ -57,34 +59,15 @@
 
           <div class="form-items">
            <!-- <label for="email">Email</label> -->
-              <br>
+              <!-- <br> -->
             <input id="register-email"type="email" name="email" value="" placeholder="Email">
           </div>
           <div class="form-items">
            <!-- <label for="password">Password</label> -->
-              <br>
+              <!-- <br> -->
             <input id="register-password"type="password" name="password" value=""placeholder="Contraseña" pattern=".{5,10}" required title="passoword must be of 5 to 10 characters">
           </div>
-          <!-- <div class="form-items-birthday">
-           <label for="Birthday">Fecha de Nacimiento</label>
-              <br>
-            <select id="Birthday"name="Birthday">
-              <option value="s">Month</option>
-              <option value="ago">August</option>
-              <option value="jul">July</option>
-              <option value="sep">September</option>
-            </select>
-            <select id="Birthday"name="Birthday">
-              <option value="d">Day</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-            <select id="Birthday"name="Birthday">
-              <option value="y">Year</option>
-              <option value="1998">1998</option>
-              <option value="1999">1999</option>
-            </select>
-          </div> -->
+
           <div class="form-items-agree">
            <label for="agree">Acepto los terminos y condiciones</label>
             <input type="checkbox" name="agree" value="agree">
