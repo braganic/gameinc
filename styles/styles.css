@@ -471,6 +471,29 @@ height: 700px;
   padding: 20px 30px 0 30px;
   border-radius: 10px;
 }
+@media (max-width: 400px) {
+     .login-box {
+       width: 90%;
+     }
+
+}
+.logo {
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 20px
+}
+.logo .logo-login {
+  font-family: 'Anton';
+  font-size: 32px;
+  color: white;
+  padding-right: 20px;
+
+
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
 
 .login-box .logos {
  top: 50px;
@@ -507,7 +530,8 @@ height: 700px;
   height: 40px;
   color: #000;
   font-size: 16px;
-
+  border-radius: 5px;
+  border: 1px solid #398EF2;
 }
 .login-box input[type="submit" ]{
   border: none ;
@@ -519,14 +543,14 @@ height: 700px;
   font-size: 18px;
   border-radius: 5px;
   border-color: red;
-
+  font-family: 'Anton';
 
 }
 .login-box a {
   text-decoration: none;
-  font-size: 12px;
+
   line-height: 20px;
-  color: darkgrey;
+  color: white;
 
 }
 .login-box a:hover {
