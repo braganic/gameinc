@@ -1,4 +1,49 @@
 <?php
+session_start();
+
+function validarLogin() {
+  $errores = [];
+
+  if (estaVacio($_POST["nombre"])) {
+    $errores["nombre"] = "Por favor complete su usuario";
+  } else if (!existeElusuario($_POST["nombre"])) {
+    $errores["nombre"] = "El usuario no existe. Registrate ";
+  }
+
+  if (estaVacio($_POST["password"])) {
+    $errores["password"] = "Dejaste la contrasenia vacia";
+  }
+
+  if (empty($errores)) {
+    $usuario = buscarUsuarioPornombre($_POST["nombre"]);
+
+    $hash = $usuario["password"];
+
+    if (password_verify($_POST["password"], $hash) == false) {
+      $errores["nombre"] = "El username y la contrasenia no verifican";
+    }
+  }
+
+  return $errores;
+}
+
+function existeElusuario($nombre) {
+  if (buscarUsuarioPornombre($nombre) === null) {
+    return false;
+  } else {
+    return true;
+  }
+}
+function buscarUsuarioPornombre($nombre) {
+  $usuarios = traerUsuarios();
+
+  foreach ($usuarios as $usuario) {
+    if ($usuario["nombre"] == $nombre) {
+      return $usuario;
+    }
+  }
+    return null;
+  }
 
 function validarRegistro() {
   $erroresRegistro = [];

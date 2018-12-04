@@ -1,3 +1,24 @@
+<?php
+require_once("funciones.php");
+
+	$errores = [];
+	$nombreDefault = " ";
+
+	if ( $_POST ) {
+
+		$errores = validarLogin();
+
+		if (count($errores) == 0) {
+		 $_SESSION["usuariologueado"] = $_POST["nombre"];
+
+			header("location:inicio.php");exit;
+		}
+
+		$nombreDefault = $_POST["nombre"];
+
+	}
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,9 +48,9 @@
               <div class="user" >
                 <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="login.html">Login</a>
+                  <a class="dropdown-item" href="login.php">Login</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="register.html">Registro</a>
+                  <a class="dropdown-item" href="register.php">Registro</a>
                 </div>
               </div>
               <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
@@ -48,22 +69,34 @@
       <section class="main">
         <span class="background-login"></span>
         <div class="login-box">
-
           <div class="logo" id= "login-logo">
-
             <a class="logo-login" href="index.html">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
           </div>
-          <form class="" action="index.html" method="post">
+          <form class="" action="login.php" method="POST">
             <!--user name  -->
-            <label for="username"></label>
-            <input type="text" name="" value="" placeholder="Usuario">
+            <label for="nombre"></label>
+            <?php if (isset($errores["nombre"])) :?>
+              <input style= "border: 1px solid red ;" type="text" name="nombre" value=" " placeholder="Usuario"/>
+              <p style= "color:red; font-size: 8px;">
+                <?=$errores["nombre"]?>
+              </p>
+            <?php else : ?>
+              <input type="text" name="nombre" value="<?=$nombreDefault?>" placeholder="Usuario"/>
+            <?php endif ; ?>
             <!--password  -->
             <label for="password"></label>
-            <input type="password" name="" value="" placeholder="Contraseña">
+            <?php if (isset($errores["password"])) :?>
+             <input style="border: 1px solid red;" type="password" name="password" value="" placeholder="Contraseña"/>
+               <p style="color:red ;font-size:8px;">
+                  <?=$errores["password"]?>
+                </p>
+            <?php else : ?>
+              <input type="password" name="password" value="" placeholder="Contraseña"/>
+            <?php endif ; ?>
 
             <input class="log-boton"type="submit" value="LOGIN">
             <a class="text" href="#">Olvidaste tu contraseña?</a><br>
-            <a class="text"href="#">Registrarme</a>
+            <a class="text"href="register.html">Registrarme</a>
 
           </form>
         </div>
