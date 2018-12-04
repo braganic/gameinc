@@ -2,7 +2,7 @@
 require_once("funciones.php");
 
 	$errores = [];
-	$nombreDefault = " ";
+	$nombreDefault = "";
 
 	if ( $_POST ) {
 
