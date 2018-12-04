@@ -63,7 +63,7 @@ require_once("funciones.php");
 
             <input class="log-boton"type="submit" value="LOGIN">
             <a class="text" href="#">Olvidaste tu contraseña?</a><br>
-            <a class="text"href="register.html">Registrarme</a>
+            <a class="text"href="register.php">Registrarme</a>
 
           </form>
         </div>
