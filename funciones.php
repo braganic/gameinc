@@ -95,4 +95,60 @@ function guardarUsuario($usuario) {
 	file_put_contents("usuarios.json", $json);
 }
 
+
+function estaVacio($campo) {
+  if ($campo == "") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function esAlfabeticoYMinimoCaracteres($campo, $nombreCampo, $min) {
+  if (estaVacio($campo)) {
+    return "Se dejo el $nombreCampo vacio";
+  } else if (strlen($campo) < $min) {
+    return "El $nombreCampo debe tener un minimo de $min caracteres";
+  } else if (ctype_alpha($campo) == false) {
+    return "El $nombreCampo debe ser alfabetico";
+  } else {
+    return null;
+  }
+}
+
+
+
+
+
+function validarRegistracion() {
+  $errores = [];
+
+  $errorEnNombre = esAlfabeticoYMinimoCaracteres($_POST["nombre"], "nombre", 3);
+  if ($errorEnNombre != null) {
+    $errores["nombre"] = $errorEnNombre;
+  }
+
+  if (estaVacio($_POST["password"])) {
+    $errores["password"] = "No se introdujo ninguna contraseña";
+  }
+  if (estaVacio($_POST["cpassword"])) {
+    $errores["cpassword"] = "Se dejo el campo confirmar contraseña vacio";
+  }
+  if (!estaVacio($_POST["password"]) && !estaVacio($_POST["cpassword"]) && $_POST["password"] != $_POST["cpassword"]) {
+    $errores["password"] = "Las contraseñas no coinciden";
+  }
+
+  if (estaVacio($_POST["email"])) {
+    $errores["email"] = "No se introdujo ningun email";
+  } else if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
+    $errores["email"] = "El email debe ser una casilla valida";
+  }
+
+  if (isset($_POST["acepto"]) == false) {
+  $errores["acepto"] = "No se aceptaron los terminos y condiciones";
+}
+
+  return $errores;
+}
+
  ?>

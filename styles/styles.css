@@ -579,8 +579,8 @@ position: relative;
   border-radius: 30px;
   padding: 17px;
   background-color: rgba(12, 12, 12, 1);
-  height: 470px;
-  width: 43%;
+  height: 520px;
+  width: 46%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -590,12 +590,6 @@ position: relative;
   text-align: center;
 }
 
-/* #logo-register {
-  margin-left: 36.5%;
-} */
-/* #form-logo a {
-  margin-left: 37%;
-} */
 #form-logo {
   text-align: center;
 }
@@ -612,7 +606,7 @@ position: relative;
 }
 
 .form-items{
-  margin-top: 20px;
+  margin-top: 22px;
   text-align: center;
   width: 100%;
 }
@@ -621,8 +615,8 @@ position: relative;
 .form-items-agree{
   margin-left: 26.5%;
   width: 60%;
-  margin-top: 8%;
-  font-family: 'Anton';
+  margin-top: 7%;
+  /* font-family: 'Anton'; */
 }
 
 
@@ -636,7 +630,7 @@ position: relative;
 #register-submit {
   width: 60%;
   margin-left: 20%;
-  margin-top: 6%;
+  margin-top: 2%;
   background-color: rgba(190, 0, 0, 0.9);
   color: white;
   padding: 6px;
@@ -645,11 +639,63 @@ position: relative;
 }
 
 @media only screen and (max-width: 532px) {
-  /* .main-register {
-    width: 100%;
-  } */
   .register {
     width: 90%;
+    height: 92%;
+    margin-bottom: 3%;
+  }
+  .form-items-agree{
+    width: 90%;
+    margin-left: 45px;
+   }
+
+  .form-items{
+    margin-top: 14px;
+    margin-bottom: 5%;
+  }
+  #register-submit{
+    margin-top: 8%;
+  }
+}
+
+@media only screen and (min-width: 280px;) {
+  .register{
+    width: 100%;
   }
 
+}
+
+@media only screen and (min-width: 418px) and (max-width: 532px){
+  .form-items-agree{
+    width: 85%;
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 532px) and (max-width: 720px) {
+  .register {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  .form-items{
+    margin-top: 23px;
+  }
+  #register-submit{
+
+  }
+  .form-items-agree{
+    width: 100%;
+    margin-left: 27%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1021px) {
+  .register {
+    width: 65%;
+    margin-bottom: 3%;
+  }
+  .form-items{
+    margin-top: 22px;
+  }
 }
