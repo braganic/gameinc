@@ -21,8 +21,7 @@ a {
 }
 .container-button-hamburgers {
   position: relative;
-
-
+  display: none;
 }
 
 .hamburger {
@@ -459,6 +458,13 @@ li {
   .background {
     height: 5430px;
   }
+
+  .container-button-hamburgers {
+    position: relative;
+    display: inline-flex;
+    
+  }
+
 
   .searchbar {
     width: 100%;
