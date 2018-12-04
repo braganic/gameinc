@@ -37,13 +37,13 @@ require_once("funciones.php");
         <span class="background-login"></span>
         <div class="login-box">
           <div class="logo" id= "login-logo">
-            <a class="logo-login" href="index.html">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+            <a class="logo-login" href="index.php">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
           </div>
           <form class="" action="login.php" method="POST">
             <!--user name  -->
             <label for="nombre"></label>
             <?php if (isset($errores["nombre"])) :?>
-              <input style= "border: 1px solid red ;" type="text" name="nombre" value=" " placeholder="Usuario"/>
+              <input style= "border: 1px solid red ;" type="text" name="nombre" value="" placeholder="Usuario"/>
               <p style= "color:red; font-size: 8px;">
                 <?=$errores["nombre"]?>
               </p>

@@ -11,7 +11,7 @@
         </button>
      </div>
      <div class="logo">
-       <a href="index.html">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+       <a href="index.php">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
      </div>
      <div class="searchbar">
        <form action="index.html" method="post">
