@@ -57,9 +57,9 @@ require_once("funciones.php");
               <div class="user" >
                 <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="login.html">Login</a>
+                  <a class="dropdown-item" href="login.php">Login</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="register.html">Registro</a>
+                  <a class="dropdown-item" href="register.php">Registro</a>
                 </div>
               </div>
               <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
