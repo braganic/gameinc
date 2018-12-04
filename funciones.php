@@ -150,11 +150,12 @@ function estaVacio($campo) {
 }
 
 function esAlfabeticoYMinimoCaracteres($campo, $nombreCampo, $min) {
+  $rex = '/^[a-zA-Z][a-zA-Z ]*$/';
   if (estaVacio($campo)) {
     return "Se dejo el $nombreCampo vacio";
   } else if (strlen($campo) < $min) {
     return "El $nombreCampo debe tener un minimo de $min caracteres";
-  } else if (ctype_alpha($campo) == false) {
+  } else if (preg_match($rex, $campo) == 0) {
     return "El $nombreCampo debe ser alfabetico";
   } else {
     return null;
