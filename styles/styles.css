@@ -350,7 +350,7 @@ footer {
 .footer-column4 i {
   font-size: 36px;
   letter-spacing: 10px;
-  padding: 20px;
+  padding: 20px 12px;
 }
 
 footer .logo {
@@ -462,7 +462,7 @@ li {
   .container-button-hamburgers {
     position: relative;
     display: inline-flex;
-    
+
   }
 
 
