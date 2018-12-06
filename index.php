@@ -2,6 +2,12 @@
 
   $title = "GAME INC &#8482"
 
+  find . -maxdepth 1 -type d \( -name '*-????' -o -name sample \) | sed 's/.\///' | \
+  while read x; do \
+      mkdir -p "$DEST/$x/" && cd "$x" && php index.php > "../$DEST/$x/index.html" && cd ../ && \
+      echo "Processed $x" ; \
+  done
+
  ?>
 
 <!DOCTYPE html>
