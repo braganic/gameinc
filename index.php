@@ -1,5 +1,7 @@
 <?php
 
+  $title = "GAME INC &#8482"
+
  ?>
 
 <!DOCTYPE html>

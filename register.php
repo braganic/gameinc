@@ -2,6 +2,7 @@
 
 require_once("funciones.php");
 
+	$title = "Registro";
 	$errores = [];
 	$errores["acepto"] = "";
 
