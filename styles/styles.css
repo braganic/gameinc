@@ -371,8 +371,6 @@ footer .logo {
 li {
   list-style-type: simp-chinese-formal;
   font-family: 'Roboto';
-  display: flex;
-  justify-content: center;
 }
 
 .footer-column4 li {
