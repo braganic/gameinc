@@ -1,6 +1,7 @@
 <?php
 require_once("funciones.php");
 
+	$title = "Login";
 	$errores = [];
 	$nombreDefault = "";
 

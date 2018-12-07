@@ -22,7 +22,7 @@
     </div>
     <div class="footer-column4">
       <h3> COMPRA 100% SEGURA </h3>
-       <ul style="padding-inline-end: 40px;">
+       <ul>
         <li>Nuestro sitio posee toda la seguridad que necesitas para realizar tu compra</li>
         <li><i class="fas fa-check-circle"></i><i class="fas fa-user-check"></i></li>
       </ul>
