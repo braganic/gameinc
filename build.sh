@@ -1,6 +1,6 @@
 #!/bin/sh
 # build.sh - PHP to static file generator
-DEST="./public_html"
+$DEST="./public_html"
 
 # Run PHP on gig folders and output HTML ready for static hosting
 find . -maxdepth 1 -type d \( -name '*-????' -o -name sample \) | sed 's/.\///' | \
