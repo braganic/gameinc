@@ -4,10 +4,10 @@ session_start();
 function validarLogin() {
   $errores = [];
 
-  if (estaVacio($_POST["nombre"])) {
-    $errores["nombre"] = "Por favor complete su usuario";
-  } else if (!existeElusuario($_POST["nombre"])) {
-    $errores["nombre"] = "El usuario no existe. Registrate ";
+  if (estaVacio($_POST["email"])) {
+    $errores["email"] = "Por favor complete su usuario";
+  } else if (!existeElEmail($_POST["email"])) {
+    $errores["email"] = "El usuario no existe. Registrate ";
   }
 
   if (estaVacio($_POST["password"])) {
@@ -15,35 +15,17 @@ function validarLogin() {
   }
 
   if (empty($errores)) {
-    $usuario = buscarUsuarioPornombre($_POST["nombre"]);
+    $usuario = buscarUsuarioPorEmail($_POST["email"]);
 
     $hash = $usuario["password"];
 
     if (password_verify($_POST["password"], $hash) == false) {
-      $errores["nombre"] = "El username y la contrasenia no verifican";
+      $errores["email"] = "El email y la contrasenia no verifican";
     }
   }
 
   return $errores;
 }
-
-function existeElusuario($nombre) {
-  if (buscarUsuarioPornombre($nombre) === null) {
-    return false;
-  } else {
-    return true;
-  }
-}
-function buscarUsuarioPornombre($nombre) {
-  $usuarios = traerUsuarios();
-
-  foreach ($usuarios as $usuario) {
-    if ($usuario["nombre"] == $nombre) {
-      return $usuario;
-    }
-  }
-    return null;
-  }
 
 function existeElEmail($email) {
 	if (buscarUsuarioPorEmail($email) != null) {
@@ -69,7 +51,7 @@ function buscarUsuarioPorEmail($email) {
 
 	foreach ($usuarios as $usuario) {
 		if ($email == $usuario["email"]) {
-			return $usuario["email"];
+			return $usuario;
 		}
 	}
 	return null;

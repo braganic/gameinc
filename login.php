@@ -3,7 +3,7 @@ require_once("funciones.php");
 
 	$title = "Login";
 	$errores = [];
-	$nombreDefault = "";
+	$emailDefault = "";
 
 	if ( $_POST ) {
 
@@ -12,10 +12,10 @@ require_once("funciones.php");
 		if (count($errores) == 0) {
 		 $_SESSION["usuariologueado"] = $_POST["nombre"];
 
-			header("location:inicio.php");exit;
+			header("location:index.php");exit;
 		}
 
-		$nombreDefault = $_POST["nombre"];
+		$emailDefault = $_POST["email"];
 
 	}
 
@@ -42,14 +42,14 @@ require_once("funciones.php");
           </div>
           <form class="" action="login.php" method="POST">
             <!--user name  -->
-            <label for="nombre"></label>
-            <?php if (isset($errores["nombre"])) :?>
-              <input style= "border: 1px solid red ;" type="text" name="nombre" value="" placeholder="Usuario"/>
+            <label for="email"></label>
+            <?php if (isset($errores["email"])) :?>
+              <input style= "border: 1px solid red ;" type="text" name="email" value="" placeholder="Email"/>
               <p style= "color:red; font-size: 8px;">
-                <?=$errores["nombre"]?>
+                <?=$errores["email"]?>
               </p>
             <?php else : ?>
-              <input type="text" name="nombre" value="<?=$nombreDefault?>" placeholder="Usuario"/>
+              <input type="text" name="email" value="<?=$emailDefault?>" placeholder="Email"/>
             <?php endif ; ?>
             <!--password  -->
             <label for="password"></label>
