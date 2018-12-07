@@ -11,7 +11,6 @@ require_once("funciones.php");
 
   if ( $_POST ) {
 		$errores = validarRegistracion();
-
 		//Si no hay errores en la registración
     if ( count($errores) == 0 ) {
 			//Registro usuario

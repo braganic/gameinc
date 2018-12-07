@@ -69,18 +69,16 @@ function buscarUsuarioPorEmail($email) {
 
 	foreach ($usuarios as $usuario) {
 		if ($email == $usuario["email"]) {
-			return $usuario;
+			return $usuario["email"];
 		}
 	}
-
 	return null;
 }
 
 function armarUsuario() {
 	return [
-		"id" => "1",
+		"id" => traerProximoId(),
 		"nombre" => ucfirst($_POST["nombre"]),
-		"edad" => 23,
 		"email" => $_POST["email"],
 		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT)
 	];
@@ -118,7 +116,15 @@ function esAlfabeticoYMinimoCaracteres($campo, $nombreCampo, $min) {
   }
 }
 
+function traerProximoId() {
+  $usuarios = traerUsuarios();
 
+  if ($usuarios == []) {
+    return 1;
+  }
+  $ultimoUsuario = end($usuarios);
+  return $ultimoUsuario["id"] + 1;
+}
 
 
 
@@ -145,13 +151,14 @@ function validarRegistracion() {
   } else if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
     $errores["email"] = "El email debe ser una casilla valida";
   }
+  if (buscarUsuarioPorEmail($_POST["email"]) != null) {
+    $errores["email"] = "El email ya fue utilizado.";
+  }
 //VALIDAR ARCHIVO
   if($_FILES == false) {
     $errores["perfil"] = "No has subido una imagen de perfil.";
   } else if ($_FILES["perfil"]["error"] == 0){
-    if ($_FILES["perfil"]["type"] == "image/jpeg" || $_FILES["perfil"]["type"] == "image/jpg" || $_FILES["perfil"]["type"] == "image/png") {
-      return null;
-    } else {
+    if ($_FILES["perfil"]["type"] != "image/jpeg" && $_FILES["perfil"]["type"] != "image/jpg" && $_FILES["perfil"]["type"] != "image/png") {
       $errores["perfil"] = "La imagen debe ser formato jpg, jpeg o png.";
     }
   } else {
