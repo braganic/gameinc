@@ -145,6 +145,18 @@ function validarRegistracion() {
   } else if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
     $errores["email"] = "El email debe ser una casilla valida";
   }
+//VALIDAR ARCHIVO
+  if($_FILES == false) {
+    $errores["perfil"] = "No has subido una imagen de perfil.";
+  } else if ($_FILES["perfil"]["error"] == 0){
+    if ($_FILES["perfil"]["type"] == "image/jpeg" || $_FILES["perfil"]["type"] == "image/jpg" || $_FILES["perfil"]["type"] == "image/png") {
+      return null;
+    } else {
+      $errores["perfil"] = "La imagen debe ser formato jpg, jpeg o png.";
+    }
+  } else {
+    $errores["perfil"] = "Ha ocurrido un error en la subida del archivo";
+  }
 
   if (isset($_POST["acepto"]) == false) {
   $errores["acepto"] = "No se aceptaron los terminos y condiciones";

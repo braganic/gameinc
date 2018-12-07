@@ -12,10 +12,15 @@ require_once("funciones.php");
   if ( $_POST ) {
 		$errores = validarRegistracion();
 
+		//Si no hay errores en la registración
     if ( count($errores) == 0 ) {
 			//Registro usuario
 			$nuevoUsuario = armarUsuario();
 			$guardar = guardarUsuario($nuevoUsuario);
+			//Guardo la foto
+			$ext = pathinfo($_FILES["perfil"]["name"], PATHINFO_EXTENSION);
+			move_uploaded_file($_FILES["perfil"]["tmp_name"], "data/users/profile/" . trim($_POST["email"]) . "." . $ext);
+			//Redirijo
     	header("location:login.php");exit;
   	}
 
@@ -42,7 +47,7 @@ require_once("funciones.php");
     <main class="mainregister">
       <section class="main-register">
 
-      <form action="register.php" method="post" class="register">
+      <form action="register.php" method="post" class="register" enctype="multipart/form-data">
           <div class="logo" id="form-logo">
             <a href="#">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
           </div>
@@ -55,6 +60,7 @@ require_once("funciones.php");
 							</p>
 						<?php else : ?>
 							<input class="name" type="text" name="nombre" value="<?=$nombreDefault?>" placeholder="Nombre">
+							<p>&nbsp;</p>
 						<?php endif; ?>
           </div>
           <div class="form-items">
@@ -65,6 +71,7 @@ require_once("funciones.php");
 							</p>
             <?php else : ?>
 							<input id="register-email"type="email" name="email" value="<?=$emailDefault?>" placeholder="Email">
+							<p>&nbsp;</p>
 						<?php endif; ?>
 					</div>
           <div class="form-items">
@@ -75,6 +82,7 @@ require_once("funciones.php");
 							</p>
 						<?php else : ?>
 							<input id="register-password"type="password" name="password" value="" placeholder="Contraseña">
+							<p>&nbsp;</p>
 						<?php endif; ?>
 					</div>
           <div class="form-items">
@@ -85,13 +93,26 @@ require_once("funciones.php");
 							</p>
 						<?php else : ?>
 							<input type="password" name="cpassword" value=""placeholder="Repita su Contraseña">
+							<p>&nbsp;</p>
             <?php endif; ?>
           </div>
+					<div class="form-items-profile">
+						<label for="perfil">Imagen de perfil</label>
+						<?php if (isset($errores["perfil"])) : ?>
+						<input type="file" name="perfil" value="perfil">
+						<p style="color:orange; font-size: 12px">
+							<?=$errores["perfil"]?>
+						</p>
+					<?php else : ?>
+						<input type="file" name="perfil" value="perfil">
+						<p>&nbsp;</p>
+					<?php endif; ?>
+					</div>
           <div class="form-items-agree">
               <label for="agree">Acepto los terminos y condiciones</label>
              <?php if (isset($_POST["acepto"])) : ?>
              	<input type="checkbox" name="acepto" value="" checked>
-
+							<p></p>
 						<?php else : ?>
 							<input type="checkbox" name="acepto" value="">
 							<p style="color: orange; font-size: 12px">
