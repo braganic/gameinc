@@ -79,7 +79,7 @@ function buscarUsuarioPorEmail($email) {
 function armarUsuario() {
 	return [
 		"id" => "1",
-		"nombre" => ucfirst($_POST["name"]),
+		"nombre" => ucfirst($_POST["nombre"]),
 		"edad" => 23,
 		"email" => $_POST["email"],
 		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT)

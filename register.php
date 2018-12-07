@@ -13,8 +13,11 @@ require_once("funciones.php");
 		$errores = validarRegistracion();
 
     if ( count($errores) == 0 ) {
-    header("location:login.php");exit;
-  }
+			//Registro usuario
+			$nuevoUsuario = armarUsuario();
+			$guardar = guardarUsuario($nuevoUsuario);
+    	header("location:login.php");exit;
+  	}
 
 	  $nombreDefault = $_POST["nombre"];
 	  $emailDefault = $_POST["email"];
