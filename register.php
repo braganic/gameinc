@@ -5,27 +5,20 @@ require_once("funciones.php");
 	$title = "Registro";
 	$errores = [];
 	$errores["acepto"] = "";
-
 	$nombreDefault = "";
-
 	$emailDefault = "";
-
 
 
   if ( $_POST ) {
 		$errores = validarRegistracion();
 
     if ( count($errores) == 0 ) {
-
     header("location:login.php");exit;
   }
 
-  $nombreDefault = $_POST["nombre"];
-
-  $emailDefault = $_POST["email"];
-
-
-}
+	  $nombreDefault = $_POST["nombre"];
+	  $emailDefault = $_POST["email"];
+	}
 
 ?>
 
