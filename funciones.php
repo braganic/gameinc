@@ -80,7 +80,8 @@ function armarUsuario() {
 		"id" => traerProximoId(),
 		"nombre" => ucfirst($_POST["nombre"]),
 		"email" => $_POST["email"],
-		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT)
+		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
+    "perfil" => $_POST["email"] . "." . pathinfo($_FILES["perfil"]["name"], PATHINFO_EXTENSION)
 	];
 }
 

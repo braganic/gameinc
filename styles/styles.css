@@ -789,3 +789,12 @@ position: relative;
     margin-top: 22px;
   }
 }
+
+
+/* PERFIL STYLES */
+
+.main-perfil {
+  position: relative;
+  top: 130px;
+  height: 500px;
+}
