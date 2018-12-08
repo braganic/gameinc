@@ -1,7 +1,8 @@
 <?php
 
-  $title = "GAME INC &#8482"
-
+  require_once("funciones.php");
+  $title = "GAME INC &#8482";
+  
  ?>
 
 <!DOCTYPE html>

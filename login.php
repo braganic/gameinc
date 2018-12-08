@@ -10,8 +10,13 @@ require_once("funciones.php");
 		$errores = validarLogin();
 
 		if (count($errores) == 0) {
-		 $_SESSION["usuariologueado"] = $_POST["nombre"];
 
+			// SI PUSO RECORDAME GUARDO COOKIE
+			if (isset($_POST["recordame"])) {
+				setcookie("usuarioLogueado", $_POST["email"], time() + 60*60*24*7);
+			}
+			//HAGO EL LOGIN
+		 	$_SESSION["usuarioLogueado"] = $_POST["email"];
 			header("location:index.php");exit;
 		}
 
@@ -61,7 +66,10 @@ require_once("funciones.php");
             <?php else : ?>
               <input type="password" name="password" value="" placeholder="Contraseña"/>
             <?php endif ; ?>
-
+						<div class="recordame">
+							<input type="checkbox" name="recordame" value="recordame">
+							<label for="recordame">Recordame</label>
+						</div>
             <input class="log-boton"type="submit" value="LOGIN">
             <a class="text" href="#">Olvidaste tu contraseña?</a><br>
             <a class="text"href="register.php">Registrarme</a>

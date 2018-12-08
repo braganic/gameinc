@@ -626,6 +626,13 @@ position: relative;
 
 
 
+.recordame input, .recordame label {
+  float: right;
+  width: 19%;
+  font-size: 14px;
+}
+
+
 /* REGISTER STYLES HERE*/
 
 .main-register {

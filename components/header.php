@@ -1,4 +1,10 @@
 <?php
+  require_once("funciones.php");
+
+  if (isset($_SESSION["usuarioLogueado"])) {
+      $nombreUsuario = traerNombreUsuario();
+  }
+
 
  ?>
 
@@ -19,18 +25,33 @@
          <button type="button" name="button" id="submit"><i class="fas fa-search"></i></button>
        </form>
      </div>
-     <div class="dropdown">
-         <div class="user" >
-           <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
-           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-             <a class="dropdown-item" href="login.php">Login</a>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item" href="register.php">Registro</a>
+     <?php if (estaLogueado()) : ?>
+         <div class="dropdown">
+             <div class="user" >
+               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                 <a class="dropdown-item" href="perfil.php">Ver Perfil</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="logout.php">Logout</a>
+               </div>
+             </div>
+             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenido <strong><?=$nombreUsuario?></strong></a>
            </div>
-         </div>
-         <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
-     </div>
-       </div>
+        </div>
+     <?php else: ?>
+         <div class="dropdown">
+             <div class="user" >
+               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                 <a class="dropdown-item" href="login.php">Login</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="register.php">Registro</a>
+               </div>
+             </div>
+             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
+           </div>
+        </div>
+  <?php endif; ?>
        <div class="cart">
          <i class="fas fa-shopping-cart" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

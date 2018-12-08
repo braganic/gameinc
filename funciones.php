@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (isset($_COOKIE["usuarioLogueado"]) && isset($_SESSION["usuarioLogueado"]) == false) {
+  $_SESSION["usuarioLogueado"] = $_COOKIE["usuarioLogueado"];
+}
+
 function validarLogin() {
   $errores = [];
 
@@ -55,6 +59,10 @@ function buscarUsuarioPorEmail($email) {
 		}
 	}
 	return null;
+}
+
+function traerNombreUsuario() {
+  return explode(' ',trim(buscarUsuarioPorEmail($_SESSION["usuarioLogueado"])["nombre"]))[0];
 }
 
 function armarUsuario() {
@@ -153,6 +161,10 @@ function validarRegistracion() {
 }
 
   return $errores;
+}
+
+function estaLogueado() {
+  return isset($_SESSION["usuarioLogueado"]);
 }
 
  ?>
