@@ -23,8 +23,10 @@ if (estaLogueado()) {
 			//Guardo la foto
 			$ext = pathinfo($_FILES["perfil"]["name"], PATHINFO_EXTENSION);
 			move_uploaded_file($_FILES["perfil"]["tmp_name"], "data/users/profile/" . trim($_POST["email"]) . "." . $ext);
+			//Guardo en session
+			$_SESSION["usuarioLogueado"] = $_POST["email"];
 			//Redirijo
-    	header("location:login.php");exit;
+    	header("location: index.php");exit;
   	}
 
 	  $nombreDefault = $_POST["nombre"];
