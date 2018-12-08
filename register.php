@@ -2,6 +2,10 @@
 
 require_once("funciones.php");
 
+if (estaLogueado()) {
+	header("location: index.php");exit;
+}
+
 	$title = "Registro";
 	$errores = [];
 	$errores["acepto"] = "";

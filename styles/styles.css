@@ -146,6 +146,12 @@ a {
   text-align: center;
   font-size: 30px;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.user img {
+  float: left;
+  width: 100%;
 }
 
 .user a:hover {

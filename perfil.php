@@ -2,11 +2,12 @@
   require_once("funciones.php");
   $title = "Perfil";
 
-  $bienvenida = "No hay ningún usuario logueado.";
-
-  if (isset($_SESSION["usuarioLogueado"])) {
-      $bienvenida = "Bienvenido a tu perfil, " . traerNombreUsuario();
+  if (!estaLogueado()) {
+  	header("location: index.php");exit;
   }
+
+  $nombreUsuario = traerNombreUsuario();
+
 
  ?>
 
@@ -24,7 +25,7 @@
          ?>
      </header>
      <main class="main-perfil">
-       <h1><?=$bienvenida?></h1>
+       <h1>Bienvenido a tu perfil, <?=$nombreUsuario?>.</h1>
      </main>
  		<?php
        require_once("components/footer.php");

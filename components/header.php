@@ -1,10 +1,10 @@
 <?php
   require_once("funciones.php");
 
-  if (isset($_SESSION["usuarioLogueado"])) {
+  if (estaLogueado()) {
       $nombreUsuario = traerNombreUsuario();
+      $rutaImagen = "data/users/profile/" . buscarUsuarioPorEmail($_SESSION["usuarioLogueado"])["perfil"];
   }
-
 
  ?>
 
@@ -28,7 +28,7 @@
      <?php if (estaLogueado()) : ?>
          <div class="dropdown">
              <div class="user" >
-               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
+               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?=$rutaImagen?>"/></a>
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                  <a class="dropdown-item" href="perfil.php">Ver Perfil</a>
                  <div class="dropdown-divider"></div>

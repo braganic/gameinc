@@ -1,6 +1,10 @@
 <?php
 require_once("funciones.php");
 
+if (estaLogueado()) {
+	header("location: index.php");exit;
+}
+
 	$title = "Login";
 	$errores = [];
 	$emailDefault = "";
