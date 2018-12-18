@@ -101,11 +101,7 @@ if (estaLogueado()) {
 							<p>&nbsp;</p>
             <?php endif; ?>
           </div>
-					<div class="form-items gender">
-						<label for="gender">Genero: &nbsp;</label>
-						<input type="radio" name="gender" value="masculino" checked> Masculino
-						<input type="radio" name="gender" value="femenino"> Femenino
-					</div>
+
 					<div class="form-items-profile">
 						<label for="file-upload" class="custom-file-upload" name="perfil" value="perfil">Subir foto de perfil</label>
 						<input id="file-upload" type="file" name="perfil"/>
@@ -117,6 +113,13 @@ if (estaLogueado()) {
 						<p>&nbsp;</p>
 					<?php endif; ?>
 					</div>
+
+					<div class="form-items gender">
+						<!-- <label for="gender">Genero: &nbsp;</label> -->
+						<input type="radio" name="gender" value="masculino" checked> Masculino
+						<input type="radio" name="gender" value="femenino"> Femenino
+					</div>
+<br>
           <div class="form-items-agree">
               <label for="agree">Acepto los terminos y condiciones</label>
              <?php if (isset($_POST["acepto"])) : ?>

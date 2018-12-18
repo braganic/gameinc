@@ -687,10 +687,16 @@ li {
 }
 
 .custom-file-upload {
-  border: 1px solid #ccc;
+  border: 2px solid #398ef2;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
+  border-radius: 3px;
+}
+
+.custom-file-upload:hover{
+  color: white;
+  background-color: rgba(57, 142, 242, 0.5);
 }
 
 .form-items {
