@@ -4,6 +4,7 @@
   if (estaLogueado()) {
       $nombreUsuario = traerNombreUsuario();
       $rutaImagen = "data/users/profile/" . buscarUsuarioPorEmail($_SESSION["usuarioLogueado"])["perfil"];
+      $bienvenida = bienvenida();
   }
 
  ?>
@@ -35,7 +36,7 @@
                  <a class="dropdown-item" href="logout.php">Logout</a>
                </div>
              </div>
-             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenido <strong><?=$nombreUsuario?></strong></a>
+             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$bienvenida?> <strong><?=$nombreUsuario?></strong></a>
            </div>
         </div>
      <?php else: ?>

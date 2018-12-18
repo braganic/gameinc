@@ -7,7 +7,7 @@
   }
 
   $nombreUsuario = traerNombreUsuario();
-
+  $bienvenida = bienvenida();
 
  ?>
 
@@ -25,7 +25,7 @@
          ?>
      </header>
      <main class="main-perfil">
-       <h1>Bienvenido a tu perfil, <?=$nombreUsuario?>.</h1>
+       <h1><?=$bienvenida?> a tu perfil, <?=$nombreUsuario?>.</h1>
      </main>
  		<?php
        require_once("components/footer.php");

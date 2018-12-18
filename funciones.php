@@ -71,6 +71,7 @@ function armarUsuario() {
 		"nombre" => ucfirst($_POST["nombre"]),
 		"email" => $_POST["email"],
 		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
+    "genero" => $_POST["gender"],
     "perfil" => $_POST["email"] . "." . pathinfo($_FILES["perfil"]["name"], PATHINFO_EXTENSION)
 	];
 }
@@ -165,6 +166,11 @@ function validarRegistracion() {
 
 function estaLogueado() {
   return isset($_SESSION["usuarioLogueado"]);
+}
+
+function bienvenida() {
+    $generoUsuario = buscarUsuarioPorEmail($_SESSION["usuarioLogueado"])["genero"];
+    return $generoUsuario == "femenino" ? "Bienvenida" : "Bienvenido";
 }
 
  ?>

@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 a {
@@ -11,7 +11,7 @@ a {
 .nav-container {
   display: flex;
   width: 100%;
-  background-color: #0E0101;
+  background-color: #0e0101;
 
   position: fixed;
   align-items: center;
@@ -37,47 +37,58 @@ a {
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-  .hamburger.is-active:hover {
-    opacity: 0.7; }
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::before,
-  .hamburger.is-active .hamburger-inner::after {
-    background-color: #fff; }
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
 
 .hamburger-box {
   width: 40px;
   height: 24px;
   display: block;
-  position: relative; }
+  position: relative;
+}
 
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: red;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
-
-
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: red;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
 
 .logo a {
-  font-family: 'Anton';
+  font-family: "Anton";
   font-size: 32px;
   color: white;
   padding-left: 20px;
@@ -93,7 +104,8 @@ a {
   width: 50%;
 }
 
-.searchbar input, .searchbar button {
+.searchbar input,
+.searchbar button {
   float: left;
 }
 
@@ -108,7 +120,7 @@ a {
 
 .searchbar #submit {
   width: 5%;
-  background-color: #398EF2;
+  background-color: #398ef2;
   border: none;
   height: 23px;
   border-top-right-radius: 100px;
@@ -126,7 +138,7 @@ a {
   content: "";
   background-image: url(../pics/background.jpg);
   height: 2500px;
-  opacity: 0.10;
+  opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
@@ -135,8 +147,9 @@ a {
   z-index: -1;
 }
 
-.user, .cart {
-  float:  left;
+.user,
+.cart {
+  float: left;
   color: white;
   border: 3px solid white;
   border-radius: 50%;
@@ -163,7 +176,7 @@ a {
 }
 
 .dropdown-menu.show {
-margin-top: 33px;
+  margin-top: 33px;
 }
 
 .cart.show .dropdown-menu.show {
@@ -174,7 +187,7 @@ margin-top: 33px;
   color: white;
   text-decoration: none;
   font-size: 14px;
-  font-family: 'Gotham-Light', sans-serif;
+  font-family: "Gotham-Light", sans-serif;
   display: flex;
   height: 40px;
   width: 0px;
@@ -206,8 +219,8 @@ margin-top: 33px;
   border: 1px solid grey;
 }
 
-
-.icon, .desc {
+.icon,
+.desc {
   float: left;
   margin: 20px;
 }
@@ -251,8 +264,8 @@ margin-top: 33px;
 }
 
 .product-container:hover {
-    border: 1px solid #e3e3e3;
-    cursor: pointer;
+  border: 1px solid #e3e3e3;
+  cursor: pointer;
 }
 
 .cover {
@@ -275,8 +288,8 @@ margin-top: 33px;
   margin: 0 auto;
 }
 
-.buynow input{
-  border: none ;
+.buynow input {
+  border: none;
   border-bottom: 1px solid red;
   margin: 5px 30px;
   outline: none;
@@ -289,16 +302,15 @@ margin-top: 33px;
 }
 
 .buynow input:hover {
-    background-color: rgba(255, 0, 0, 0.9);
-    cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.9);
+  cursor: pointer;
 }
 
 .price {
   margin: 0 auto;
   font-size: 28px;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
 }
-
 
 .special {
   display: flex;
@@ -338,15 +350,16 @@ footer {
   align-items: baseline;
 }
 
-
-.footer-column2, .footer-column3 {
+.footer-column2,
+.footer-column3 {
   float: left;
   color: white;
   width: 20%;
   padding: 100px 0px;
 }
 
-.footer-column1, .footer-column4 {
+.footer-column1,
+.footer-column4 {
   float: left;
   color: white;
   width: 30%;
@@ -376,7 +389,7 @@ footer .logo {
 
 li {
   list-style-type: simp-chinese-formal;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .footer-column4 li {
@@ -391,26 +404,24 @@ li {
 }
 
 @media only screen and (max-width: 1710px) {
+  .background {
+    height: 2800px;
+  }
 
-    .background {
-      height: 2800px;
-    }
+  .top-products {
+    margin-top: 50px;
+  }
 
-    .top-products {
-      margin-top: 50px;
-    }
-
-    .product-row {
-      width: 100%;
-    }
+  .product-row {
+    width: 100%;
+  }
 
   .product-container {
-    margin: 50px auto 0px auto
-    }
+    margin: 50px auto 0px auto;
+  }
 }
 
 @media only screen and (max-width: 1450px) {
-
   .background {
     height: 2990px;
   }
@@ -419,7 +430,8 @@ li {
     width: 97%;
   }
 
-  footer, footer label {
+  footer,
+  footer label {
     font-size: 12px;
   }
 
@@ -427,31 +439,32 @@ li {
     font-size: 16px;
   }
 
-  footer .fas, footer .fab {
+  footer .fas,
+  footer .fab {
     font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 1150px) {
-
-
   .background {
     height: 3430px;
   }
 
   #dropdownText {
-    display:none;
+    display: none;
   }
 
   .links-section {
-    width: 50%
+    width: 50%;
   }
 
-  .footer-column2, .footer-column3 {
-    display:none;
+  .footer-column2,
+  .footer-column3 {
+    display: none;
   }
 
-  .footer-column1, .footer-column4 {
+  .footer-column1,
+  .footer-column4 {
     width: 50%;
     text-align: center;
     padding-top: 20px;
@@ -460,7 +473,6 @@ li {
 }
 
 @media only screen and (max-width: 880px) {
-
   .background {
     height: 5430px;
   }
@@ -468,9 +480,7 @@ li {
   .container-button-hamburgers {
     position: relative;
     display: inline-flex;
-
   }
-
 
   .searchbar {
     width: 100%;
@@ -478,7 +488,8 @@ li {
     align-items: center;
   }
 
-  .user, .cart {
+  .user,
+  .cart {
     display: none;
   }
 
@@ -495,9 +506,8 @@ li {
     width: 100%;
   }
 
-
-
-  .footer-column1, .footer-column4 {
+  .footer-column1,
+  .footer-column4 {
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -505,7 +515,6 @@ li {
 }
 
 @media only screen and (max-width: 532px) {
-
   .background {
     height: 4850px;
   }
@@ -523,15 +532,15 @@ li {
 /* LOGIN STYLES HERE*/
 
 .main-login {
-height: 700px;
-position: relative;
+  height: 700px;
+  position: relative;
 }
 
-.login-box{
+.login-box {
   margin-top: 50px;
   width: 350px;
   height: 420px;
-  background: #0E0101;
+  background: #0e0101;
   color: #fff;
   top: 50%;
   left: 50%;
@@ -542,35 +551,28 @@ position: relative;
   border-radius: 20px;
 }
 
-#login-logo{
+#login-logo {
   text-align: center;
   font-size: 32px;
   padding-top: 20px;
   padding-bottom: 20px;
-
-
 }
 /* a.logo-login{
   font-size: 32px
 } */
 
-
 .login-box .logos {
- top: 50px;
-
+  top: 50px;
 }
 
-
-}
 .login-box label {
   margin: 0;
   padding: 0;
   font-weight: bold;
   display: block;
-
 }
 
-.login-box input{
+.login-box input {
   width: 100%;
   margin-bottom: 20px;
   padding-left: 6px;
@@ -580,16 +582,15 @@ position: relative;
 .login-box input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
-  background: #fff ;
+  background: #fff;
   outline: none;
   height: 40px;
   color: #000;
   font-size: 16px;
   border-radius: 5px;
-
 }
-.login-box input[type="submit" ]{
-  border: none ;
+.login-box input[type="submit"] {
+  border: none;
   border-bottom: 1px solid red;
   outline: none;
   height: 40px;
@@ -598,22 +599,19 @@ position: relative;
   font-size: 18px;
   border-radius: 5px;
   border-color: red;
-  font-family: 'Anton';
-
+  font-family: "Anton";
 }
-.login-box  {
+.login-box {
   text-decoration: none;
   line-height: 20px;
   color: white;
-
 }
 .login-box a:hover {
   color: #fff;
-
 }
-.login-box input[type="submit"]:hover  {
+.login-box input[type="submit"]:hover {
   color: #fff;
-  background-color: #F92819;
+  background-color: #f92819;
   cursor: pointer;
 }
 
@@ -621,7 +619,7 @@ position: relative;
   content: "";
   background-image: url(../pics/background.jpg);
   height: 100%;
-  opacity: 0.10;
+  opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
@@ -630,14 +628,12 @@ position: relative;
   z-index: -1;
 }
 
-
-
-.recordame input, .recordame label {
+.recordame input,
+.recordame label {
   float: right;
   width: 19%;
   font-size: 14px;
 }
-
 
 /* REGISTER STYLES HERE*/
 
@@ -651,7 +647,7 @@ position: relative;
 }
 
 .register {
-  border: 2px solid #398EF2;
+  border: 2px solid #398ef2;
   border-radius: 30px;
   padding: 17px;
   background-color: rgba(12, 12, 12, 1);
@@ -676,18 +672,28 @@ position: relative;
   margin-bottom: 30px;
 }
 
-.register input{
+.register input {
   color: rgb(15, 84, 221);
-  border: 1px solid #398EF2;
+  border: 1px solid #398ef2;
   padding: 8px;
   border-radius: 5px;
-
 }
-.register label{
+.register label {
   color: white;
 }
 
-.form-items{
+.register input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.form-items {
   margin-top: -10px;
   text-align: center;
   width: 100%;
@@ -700,24 +706,20 @@ position: relative;
   margin-left: 0px;
 }
 
-.form-items-profile input{
-  border: 0px;
-  font-size: 12px;
-  color: orange;
+.gender {
+  color: white;
 }
 
-.form-items-agree{
+.form-items-agree {
   text-align: center;
   width: 100%;
   margin-top: 0px;
   /* font-family: 'Anton'; */
 }
 
-.form-items-agree input{
+.form-items-agree input {
   margin-left: 5px;
 }
-
-
 
 #register-submit:hover {
   background-color: rgba(255, 0, 0, 0.9);
@@ -734,7 +736,7 @@ position: relative;
   color: white;
   padding: 6px;
   border-color: rgba(255, 0, 0, 0.7);
-  font-family: 'Anton';
+  font-family: "Anton";
 }
 
 @media only screen and (max-width: 532px) {
@@ -747,29 +749,28 @@ position: relative;
     min-height: 690px;
     margin-bottom: 3%;
   }
-  .form-items-agree{
+  .form-items-agree {
     width: 90%;
     margin-left: 45px;
-   }
+  }
 
-  .form-items{
+  .form-items {
     margin-top: 14px;
     margin-bottom: 5%;
   }
-  #register-submit{
+  #register-submit {
     margin-top: 8%;
   }
 }
 
 @media only screen and (min-width: 280px;) {
-  .register{
+  .register {
     width: 100%;
   }
-
 }
 
-@media only screen and (min-width: 418px) and (max-width: 532px){
-  .form-items-agree{
+@media only screen and (min-width: 418px) and (max-width: 532px) {
+  .form-items-agree {
     width: 85%;
     margin-left: 20%;
   }
@@ -780,13 +781,12 @@ position: relative;
     width: 80%;
     margin-bottom: 5%;
   }
-  .form-items{
+  .form-items {
     margin-top: 23px;
   }
-  #register-submit{
-
+  #register-submit {
   }
-  .form-items-agree{
+  .form-items-agree {
     width: 100%;
     margin-left: 27%;
     margin-top: 5%;
@@ -798,11 +798,10 @@ position: relative;
     width: 65%;
     margin-bottom: 3%;
   }
-  .form-items{
+  .form-items {
     margin-top: 22px;
   }
 }
-
 
 /* PERFIL STYLES */
 
