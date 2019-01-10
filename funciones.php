@@ -1,4 +1,7 @@
 <?php
+
+require_once("pdo.php");
+
 session_start();
 
 if (isset($_COOKIE["usuarioLogueado"]) && isset($_SESSION["usuarioLogueado"]) == false) {
@@ -39,35 +42,12 @@ function existeElEmail($email) {
 	}
 }
 
-function traerUsuarios() {
-
-	$archivo = file_get_contents("usuarios.json");
-
-	if ($archivo === "") {
-		return [];
-	}
-
-	return json_decode($archivo, true);
-}
-
-function buscarUsuarioPorEmail($email) {
-	$usuarios = traerUsuarios();
-
-	foreach ($usuarios as $usuario) {
-		if ($email == $usuario["email"]) {
-			return $usuario;
-		}
-	}
-	return null;
-}
-
 function traerNombreUsuario() {
   return explode(' ',trim(buscarUsuarioPorEmail($_SESSION["usuarioLogueado"])["nombre"]))[0];
 }
 
 function armarUsuario() {
 	return [
-		"id" => traerProximoId(),
 		"nombre" => ucfirst($_POST["nombre"]),
 		"email" => $_POST["email"],
 		"password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
@@ -76,15 +56,7 @@ function armarUsuario() {
 	];
 }
 
-function guardarUsuario($usuario) {
-	$usuarios = traerUsuarios();
 
-	$usuarios[] = $usuario;
-
-	$json = json_encode($usuarios);
-
-	file_put_contents("usuarios.json", $json);
-}
 
 
 function estaVacio($campo) {
@@ -108,15 +80,7 @@ function esAlfabeticoYMinimoCaracteres($campo, $nombreCampo, $min) {
   }
 }
 
-function traerProximoId() {
-  $usuarios = traerUsuarios();
 
-  if ($usuarios == []) {
-    return 1;
-  }
-  $ultimoUsuario = end($usuarios);
-  return $ultimoUsuario["id"] + 1;
-}
 
 
 
@@ -173,4 +137,70 @@ function bienvenida() {
     return $generoUsuario == "femenino" ? "Bienvenida" : "Bienvenido";
 }
 
- ?>
+
+
+
+
+//FUNCIONES SQL!!!
+
+
+
+function guardarUsuario($usuario) {
+  	global $db;
+    $sql = "INSERT INTO users values(default, :nombre, :email, :contrasena, :genero, :perfil)";
+
+    $consulta = $db->prepare($sql);
+
+   $consulta->bindValue(":nombre",$usuario["nombre"] );
+   $consulta->bindValue(":email",$usuario["email"] );
+   $consulta->bindValue(":contrasena",$usuario["password"] );
+   $consulta->bindValue(":genero",$usuario["genero"] );
+   $consulta->bindValue(":perfil",$usuario["perfil"] );
+
+   $consulta ->execute();
+}
+
+
+function traerUsuarios() {
+ global $db;
+
+ $sql = "SELECT * FROM users";
+
+ $consulta = $db->prepare($sql);
+
+ $consulta-> execute();
+
+ return $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+ }
+
+
+function buscarUsuarioPorId($id) {
+   global $db;
+
+   $sql = "SELECT * FROM users WHERE id = :id";
+
+   $consulta = $db->prepare($sql);
+
+   $consulta-> bindValue(":id", $id);
+
+   $consulta->execute();
+
+   return $consulta->fetch(PDO::FETCH_ASSOC);
+}
+
+function buscarUsuarioPorEmail($email) {
+  global $db;
+
+  $sql = "SELECT * FROM users WHERE email = :email";
+
+  $consulta = $db->prepare($sql);
+
+  $consulta-> bindValue(":email", $email);
+
+  $consulta->execute();
+
+  return $consulta->fetch(PDO::FETCH_ASSOC);
+}
+
+?>
