@@ -60,7 +60,7 @@
             <div class="product-row">
               <div class="product-container">
                 <div class="cover">
-                  <img src="pics/red2.jpg" alt="">
+                  <img src="/storage/red2.jpg" alt="">
                   <img id="newitem" src="http://www.stickpng.com/assets/thumbs/5a5a8a2214d8c4188e0b08e4.png" alt="">
                 </div>
                 <div class="price">
@@ -72,7 +72,7 @@
               </div>
               <div class="product-container">
                 <div class="cover">
-                  <img src="pics/fifa19.jpg" alt="">
+                  <img src="/storage/fifa19.jpg" alt="">
                 </div>
                 <div class="price">
                   $1999
@@ -83,7 +83,7 @@
               </div>
               <div class="product-container">
                 <div class="cover">
-                  <img src="pics/titan.jpg" alt="">
+                  <img src="/storage/titan.jpg" alt="">
                 </div>
                 <div class="price">
                   $1499
@@ -96,7 +96,7 @@
           <div class="product-row">
             <div class="product-container">
               <div class="cover">
-                <img src="pics/acreed.jpg" alt="">
+                <img src="/storage/acreed.jpg" alt="">
               </div>
               <div class="price">
                 $2399
@@ -107,7 +107,7 @@
             </div>
             <div class="product-container">
               <div class="cover">
-                <img src="pics/battlefield.jpg" alt="">
+                <img src="/storage/battlefield.jpg" alt="">
               </div>
               <div class="price">
                 $2199
@@ -118,7 +118,7 @@
             </div>
             <div class="product-container">
               <div class="cover">
-                <img src="pics/fallout.jpg" alt="">
+                <img src="/storage/fallout.jpg" alt="">
               </div>
               <div class="price">
                 $1199
@@ -133,24 +133,24 @@
 
           <div class="special">
             <div class="special-img">
-              <img src="pics/nswitch.jpg" alt="">
+              <img src="/storage/nswitch.jpg" alt="">
             </div>
             <div class="special-img">
-              <img src="pics/funko.jpg" alt="">
+              <img src="/storage/funko.jpg" alt="">
             </div>
             <div class="special-img">
-              <img src="pics/labo.jpg" alt="">
+              <img src="/storage/labo.jpg" alt="">
             </div>
           </div>
           <div class="top-categories">
             <div class="category-img">
-              <img src="pics/notebooks.jpg" alt="">
+              <img src="/storage/notebooks.jpg" alt="">
             </div>
             <div class="category-img">
-              <img src="pics/edcolecciones.jpg" alt="">
+              <img src="/storage/edcolecciones.jpg" alt="">
             </div>
             <div class="category-img">
-              <img src="pics/binfantiles.jpg" alt="">
+              <img src="/storage/binfantiles.jpg" alt="">
             </div>
           </div>
         </section>

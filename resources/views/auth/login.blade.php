@@ -6,7 +6,7 @@
         <span class="background-login"></span>
         <div class="login-box">
           <div class="logo" id= "login-logo">
-            <a class="logo-login" href="index.php">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+            <a class="logo-login" href="\index">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
           </div>
           <form class="" action="\login" method="POST">
             {{ csrf_field() }}
@@ -38,4 +38,6 @@
         </div>
       </section>
     </main>
+    <span class="background-login"></span>
+    
 @endsection

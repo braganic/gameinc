@@ -1,6 +1,10 @@
 @extends('plantilla')
 @section('principal')
 
+  <main class="mainregister">
+        <section class="main-register">
+
+
       <form action="\register" method="post" class="register" enctype="multipart/form-data">
         {{ csrf_field() }}
           <div class="logo" id="form-logo">

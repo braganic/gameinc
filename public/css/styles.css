@@ -136,7 +136,7 @@ a {
 
 .background {
   content: "";
-  background-image: url(../pics/background.jpg);
+  background-image: url(/storage/background.jpg);
   height: 2500px;
   opacity: 0.1;
   top: 0;
@@ -617,7 +617,7 @@ li {
 
 .background-login {
   content: "";
-  background-image: url(../pics/background.jpg);
+  background-image: url(/storage/background.jpg);
   height: 100%;
   opacity: 0.1;
   top: 0;
