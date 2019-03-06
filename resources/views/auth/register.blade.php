@@ -63,6 +63,8 @@
 						<!-- <label for="gender">Genero: &nbsp;</label> -->
 						<input type="radio" name="gender" value="masculino" checked> Masculino
 						<input type="radio" name="gender" value="femenino"> Femenino
+            <input type="radio" name="gender" value="femenino"> Otro
+
 					</div>
 <br>
           <div class="form-items-agree">
