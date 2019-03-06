@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
+use App\Category;
 
 class ProductsController extends Controller
 {
     public function directory() {
       $products = Product::paginate();
+      $categories = Category::paginate();
 
-      return view("products", compact("products"));
+      return view("products", compact("products", "categories"));
     }
 
     public function show($id) {
@@ -53,5 +55,14 @@ class ProductsController extends Controller
       $products = Product::where("name", "like", "%$search%")->get();
 
       return view('search', compact("products"));
+    }
+
+    public function category(Request $req) {
+      $search = $req["category"];
+      $category = Category::find($search);
+      $products = Product::where("category_id", "like", "$category->id")->get();
+      $categories = Category::paginate();
+
+      return view('products', compact("products","categories"));
     }
 }

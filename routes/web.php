@@ -27,3 +27,5 @@ Route::get('/cart', "ProductsController@viewCart");
 Route::post('/cart', "ProductsController@finishCheckout")->middleware('auth');
 
 Route::get('/search', "ProductsController@search");
+
+Route::get('/category', "ProductsController@category");
