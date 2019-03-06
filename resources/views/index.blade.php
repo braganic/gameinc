@@ -2,7 +2,7 @@
 
 @section('principal')
 
-  <main class="main">
+
         <section class="carousel">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -155,6 +155,6 @@
           </div>
         </section>
         <span class="background"></span>
-      </main>
+      
 
 @endsection

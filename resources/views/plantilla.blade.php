@@ -3,7 +3,7 @@
   <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> Tienda de videojuegos</title>
+   <title>@yield('titulo')</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=Anton|Raleway:400,700|Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -20,38 +20,61 @@
         </button>
      </div>
      <div class="logo">
-       <a href="\index">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+       <a href="/">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
      </div>
      <div class="searchbar">
-       <form action="index.html" method="post">
-         <input type="text" name="" value="" id="searchtext" placeholder="Buscá miles de productos...">
-         <button type="button" name="button" id="submit"><i class="fas fa-search"></i></button>
+       <form action="/search" method="get">
+         {{csrf_field()}}
+         <input type="text" name="search" value="" id="searchtext" placeholder="Buscá miles de productos...">
+         <button type="submit" name="button" id="submit"><i class="fas fa-search"></i></button>
        </form>
      </div>
+@if (Auth::check())
 
-         <div class="dropdown">
-             <div class="user" >
-               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
-               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                 <a class="dropdown-item" href="\login">Login</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="\register">Registro</a>
-               </div>
-             </div>
-             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
-           </div>
-        </div>
+        <div class="dropdown">
+            <div class="user" >
+              <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{Auth::user()->name}}"/></a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="perfil.php">Ver Perfil</a>
+                <div class="dropdown-divider"></div>
+                <form method="POST" action="/logout">
+                  @csrf
+                  <button class="dropdown-item" type="submit">Logout</button>
+                </form>
+              </div>
+            </div>
+            <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola <strong>{{Auth::user()->name}}</strong></a>
+          </div>
+       </div>
+@else
+
+<div class="dropdown">
+    <div class="user" >
+      <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="\login">Login</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="\register">Registro</a>
+      </div>
+    </div>
+    <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
+  </div>
+</div>
+
+       @endif
 
        <div class="cart">
          <i class="fas fa-shopping-cart" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Ver Carrito</a>
+          <a class="dropdown-item" href="/cart">Ver Carrito</a>
         </div>
        </div>
      </div>
  </nav>
+<main class="main">
+   @yield('principal')
+</main>
 
- @yield('principal')
 
  <footer>
   <div class="footer-container">

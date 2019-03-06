@@ -11,10 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/index', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/products', "ProductsController@directory");
+
+Route::get('/products/{id}', "ProductsController@show");
+
+Route::post('/addToCart/{id}', "ProductsController@addToCart");
+
+Route::get('/cart', "ProductsController@viewCart");
+
+Route::post('/cart', "ProductsController@finishCheckout")->middleware('auth');
+
+Route::get('/search', "ProductsController@search");
