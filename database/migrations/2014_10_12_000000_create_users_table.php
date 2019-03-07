@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('country');
             $table->string('cities')->nullable();
             $table->string('avatar');
+            $table->integer('type');
             $table->rememberToken();
             $table->timestamps();
         });
