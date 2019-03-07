@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -52,7 +52,9 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255', 'min:4'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar' => ['file']
+            'avatar' => ['required', 'image'],
+            'country' => ['required'],
+            'terms' => ['required'],
         ]);
     }
 
@@ -64,10 +66,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      $poster = $data["avatar"];
+      $rutaDondeSeGuardaElArchivo = $poster->store("public");
+      $nombreDelArchivo = basename($rutaDondeSeGuardaElArchivo);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'country' => $data['country'],
+            'cities' => $data['cities'],
+            'avatar' => $nombreDelArchivo
         ]);
     }
 }
