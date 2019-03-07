@@ -29,3 +29,9 @@ Route::post('/cart', "ProductsController@finishCheckout")->middleware('auth');
 Route::get('/search', "ProductsController@search");
 
 Route::get('/category', "ProductsController@category");
+
+Route::get('/create', "ProductsController@create");
+
+Route::post('/create', "ProductsController@save");
+
+Route::get('/perfil', "UserController@show")->middleware('auth');

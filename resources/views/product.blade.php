@@ -19,7 +19,11 @@
   <li>
     Categoria: {{$product->category->name}}
   </li>
+
+
+
 </ul>
+  Foto: <img src="/storage/{{$product->foto}}" alt="" style="width:200px;height:200px;">
   @if (!$cart->contains($product))
   <form action="/addToCart/{{$product->id}}" method="post">
     {{csrf_field()}}

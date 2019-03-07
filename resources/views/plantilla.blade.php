@@ -35,7 +35,7 @@
             <div class="user" >
               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{Auth::user()->name}}"/></a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="perfil.php">Ver Perfil</a>
+                <a class="dropdown-item" href="/perfil">Ver Perfil</a>
                 <div class="dropdown-divider"></div>
 
 

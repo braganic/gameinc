@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
 use App\Category;
+use App\Brand;
 
 class ProductsController extends Controller
 {
@@ -64,5 +65,31 @@ class ProductsController extends Controller
       $categories = Category::paginate();
 
       return view('products', compact("products","categories"));
+    }
+
+    public function create() {
+      $categories = Category::all();
+      $brands = Brand::all();
+      return view('createProduct', compact("categories","brands"));
+    }
+
+    public function save(Request $data) {
+
+      $poster = $data["foto"];
+      $rutaDondeSeGuardaElArchivo = $poster->store("public");
+      $nombreDelArchivo = basename($rutaDondeSeGuardaElArchivo);
+
+      Product::create([
+          'name' => $data['name'],
+          'stock' => $data['stock'],
+          'price' => $data['price'],
+          'brand_id' => $data['brand'],
+          'category_id' => $data['category'],
+          'foto' => $nombreDelArchivo
+      ]);
+
+      return redirect('/products');
+
+
     }
 }

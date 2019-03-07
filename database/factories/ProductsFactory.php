@@ -12,6 +12,7 @@ $factory->define(\App\Product::class, function (Faker $faker) {
       "stock" => $faker->numberBetween(0, 100),
       "price" => $faker->randomFloat(2, 0, 1000),
       "category_id" => $categories->shuffle()->first()->id,
-      "brand_id" => $brands->shuffle()->first()->id
+      "brand_id" => $brands->shuffle()->first()->id,
+      "foto" => "prueba"
     ];
 });
