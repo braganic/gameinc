@@ -1,4 +1,13 @@
 @extends('plantilla')
+@section("titulo")
+Registro
+@endsection
+
+@section("script")
+/js/validateRegister.js
+@endsection
+
+
 @section('principal')
 
   <main class="mainregister">
@@ -47,6 +56,18 @@
                             @endif
             <p>&nbsp;</p>
           </div>
+
+  <div class="form-item">
+    <label>Pais:</label>
+    <select class="form-control" name="country" id="country">
+    </select>
+
+</div>
+
+<div class="form-item hidden" id="citiesCol">
+<label>Provincia</label><select class="form-control" name="cities" id="cities"></select>
+</div>
+
 
 					<div class="form-items-profile">
 						<label for="file-upload" class="custom-file-upload" name="avatar" value="perfil">Subir foto de perfil</label>
