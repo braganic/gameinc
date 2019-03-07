@@ -48,7 +48,7 @@ Registro
             <p>&nbsp;</p>
 					</div>
           <div class="form-items">
-            <input type="password" class="form-control{{ $errors->has('password_confirm') ? ' is-invalid' : '' }}" name="password_confirm" value=""placeholder="Repita su Contraseña">
+            <input type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" value=""placeholder="Repita su Contraseña">
             @if ($errors->has('password'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('password') }}</strong>
@@ -59,13 +59,19 @@ Registro
 
   <div class="form-item">
     <label>Pais:</label>
-    <select class="form-control" name="country" id="country">
+    <select class="form-control {{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" id="country">
+        <option value="">Elegí</option>
     </select>
-
+    @if ($errors->has('country'))
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('country') }}</strong>
+        </span>
+    @endif
 </div>
 
-<div class="form-item hidden" id="citiesCol">
-<label>Provincia</label><select class="form-control" name="cities" id="cities"></select>
+<div class="form-item d-none" id="citiesCol">
+<label>Provincia</label>
+<select class="form-control" name="cities" id="cities"></select>
 </div>
 
 
@@ -80,17 +86,22 @@ Registro
             <p>&nbsp;</p>
 					</div>
 
-					<div class="form-items gender">
-						<!-- <label for="gender">Genero: &nbsp;</label> -->
-						<input type="radio" name="gender" value="masculino" checked> Masculino
-						<input type="radio" name="gender" value="femenino"> Femenino
-            <input type="radio" name="gender" value="femenino"> Otro
+				<!-- <div class="form-items gender"> -->
+					<!-- <label for="gender">Genero: &nbsp;</label> -->
+					<!-- <input type="radio" name="gender" value="masculino" checked> Masculino -->
+					<!-- <input type="radio" name="gender" value="femenino"> Femenino -->
+          <!-- <input type="radio" name="gender" value="femenino"> Otro -->
 
-					</div>
+				<!-- </div> -->
 <br>
           <div class="form-items-agree">
               <label for="agree">Acepto los terminos y condiciones</label>
-							<input type="checkbox" name="acepto" value="">
+							<input type="checkbox" name="terms" value="checkbox">
+              @if ($errors->has('terms'))
+                                  <span class="invalid-feedback" role="alert" style="display: block;">
+                                      <strong>{{ $errors->first('terms') }}</strong>
+                                  </span>
+                              @endif
 
           </div>
               <input class="form-items"id="register-submit"type="submit" name="submit" value="REGISTRATE">
