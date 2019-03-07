@@ -37,24 +37,10 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="perfil.php">Ver Perfil</a>
                 <div class="dropdown-divider"></div>
-
-
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                 onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                  Logout
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-                </form>
-
-
-
-                <!-- <form method="POST" action="/logout">
+                <form method="POST" action="/logout">
                   @csrf
                   <button class="dropdown-item" type="submit">Logout</button>
-                </form> -->
+                </form>
               </div>
             </div>
             <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola <strong>{{Auth::user()->name}}</strong></a>

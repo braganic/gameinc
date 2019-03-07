@@ -33,14 +33,14 @@ $(document).ready(function() {
 
   countriesSelect.onchange = function() {
     if (this.value === "Argentina") {
-      citiesCol.classList.remove("d-none");
+      citiesCol.classList.remove("hidden");
       fetchCall(
         "https://dev.digitalhouse.com/api/getProvincias",
         fillCitiesSelect
       );
     } else {
-      citiesCol.classList.add("d-none");
-      citiesSelect.innerHTML = "";
+      citiesCol.classList.add("hidden");
+      citiesCol.innerHTML = "";
     }
   };
 
@@ -48,9 +48,6 @@ $(document).ready(function() {
     var fileName = e.target.files[0].name;
     var botonPerfil = document.getElementsByClassName("custom-file-upload")[0];
     var extension = fileName.split(".").pop();
-    console.log(filename)
-    console.log(botonPerfil)
-    console.log(extension)
 
     if (extension == "jpg" || extension == "jpeg" || extension == "png") {
       botonPerfil.innerHTML = fileName;
