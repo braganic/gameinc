@@ -83,8 +83,8 @@ class ProductsController extends Controller
           'name' => $data['name'],
           'stock' => $data['stock'],
           'price' => $data['price'],
-          'brand_id' => $data['brand'],
-          'category_id' => $data['category'],
+          'brand_id' => $data['brand_id'],
+          'category_id' => $data['category_id'],
           'foto' => $nombreDelArchivo
       ]);
 

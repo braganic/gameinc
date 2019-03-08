@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section("titulo")
-Registro
+Crear Producto
 @endsection
 
 @section("script")
@@ -54,11 +54,7 @@ Registro
 					<div class="form-items-profile">
 						<label for="file-upload" class="custom-file-upload" name="foto" value="foto">Subir foto del producto</label>
 						 <input id="file-upload" class="form-control" type="file" name="foto"/>
-            <!-- @if ($errors->has('avatar'))
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $errors->first('avatar') }}</strong>
-                              </span>
-                          @endif  -->
+            
             <p>&nbsp;</p>
 					</div>
 
