@@ -34,7 +34,7 @@ class ProductsController extends Controller
 
     public function viewCart() {
       $cart = new Cart();
-
+      
       return view("cart");
     }
 

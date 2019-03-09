@@ -6,6 +6,7 @@
 
   @section("principal")
   <h1>Carrito</h1>
+    @if ($cart->list() != [])
   <ul>
     @foreach ($cart->list() as $product)
       <li>
@@ -15,10 +16,11 @@
       </li>
     @endforeach
   </ul>
-  @if ($cart)
   <form action="/cart" method="post">
     {{csrf_field()}}
     <button type="Submit" name="button">Finalizar compra</button>
   </form>
-  @endif
+    @else
+    <p>El carrito se encuentra vacío.</p>
+    @endif
   @endsection

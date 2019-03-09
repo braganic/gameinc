@@ -35,3 +35,7 @@ Route::get('/create', "ProductsController@create");
 Route::post('/create', "ProductsController@save");
 
 Route::get('/perfil', "UserController@show")->middleware('auth');
+
+Route::get('registeradmin', "AdminController@add")->middleware('admin');
+
+Route::post('registeradmin', "AdminController@store");
