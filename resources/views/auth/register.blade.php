@@ -63,7 +63,7 @@ Registro
   <div class="form-item">
     <label>Pais:</label>
     <select class="form-control {{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" id="country">
-        <option value="">Elegí</option>
+        <option value="">Elegí tu pais</option>
     </select>
     @if ($errors->has('country'))
         <span class="invalid-feedback" role="alert">
