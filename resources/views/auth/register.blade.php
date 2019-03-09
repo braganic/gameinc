@@ -20,8 +20,9 @@ Registro
             <a href="#">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
           </div>
 
-        	<div class="form-items">
-            <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" name="name" value="{{old('name')}}" placeholder="Nombre" autofocus>
+        	<div class="form-items" class="form-group">
+            <input id="register-name"class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" name="name" value="{{old('name')}}" placeholder="Nombre" autofocus>
+            	<div class="invalid-feedback"></div>
             @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('name') }}</strong>
@@ -31,6 +32,7 @@ Registro
 				  </div>
           <div class="form-items">
            <input id="register-email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" value="{{old('email')}}" placeholder="Email" autofocus>
+           	<div class="invalid-feedback"></div>
            @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('email') }}</strong>
@@ -40,6 +42,7 @@ Registro
 					</div>
           <div class="form-items">
           	<input id="register-password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" value="" placeholder="Contraseña">
+            	<div class="invalid-feedback"></div>
             @if ($errors->has('password'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('password') }}</strong>

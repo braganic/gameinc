@@ -122,7 +122,7 @@
   </div>
   <div class="rights">
     <div class="logo">
-      <a href="\index">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
+      <a href="\">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
     </div>
     <p> ©Todos los derechos reservados. </p>
   </div>

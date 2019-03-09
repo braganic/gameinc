@@ -580,13 +580,10 @@ li {
 
 .login-box input[type="text"],
 .login-box input[type="password"] {
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: #fff;
-  outline: none;
-  height: 40px;
-  color: #000;
-  font-size: 16px;
+  /* border: none; */
+  color: rgb(15, 84, 221);
+  border: 1px solid #398ef2;
+  padding: 8px;
   border-radius: 5px;
 }
 .login-box input[type="submit"] {
@@ -647,7 +644,7 @@ li {
 }
 
 .register {
-  border: 2px solid #398ef2;
+  border: 1px solid #398ef2;
   border-radius: 30px;
   padding: 17px;
   background-color: rgba(12, 12, 12, 1);
@@ -674,7 +671,7 @@ li {
 
 .register input {
   color: rgb(15, 84, 221);
-  border: 2px solid #398ef2;
+  border: 1px solid #398ef2;
   padding: 8px;
   border-radius: 5px;
 }
@@ -701,7 +698,7 @@ li {
 }
 
 .form-items {
-  margin-top: -10px;
+  margin-top: 0px;
   text-align: center;
   width: 100%;
 }
