@@ -7,13 +7,13 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="http://www.cdmarket.com.ar/Pubs/Sites/Default/Custom/venta-RDR2.jpg" alt="First slide">
+                <img class="d-block w-100" src="/storage/carrousel1.jpg" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="https://www.cdmarket.com.ar/Pubs/Sites/Default/Custom/ps4-edl.jpg" alt="Second slide">
+                <img class="d-block w-100" src="/storage/carrousel2.jpg" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="http://www.cdmarket.com.ar/Pubs/Sites/Default/Custom/odissey-venta.jpg" alt="Third slide">
+                <img class="d-block w-100" src="/storage/carrousel3.jpg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -61,7 +61,7 @@
               <div class="product-container">
                 <div class="cover">
                   <img src="/storage/red2.jpg" alt="">
-                  <img id="newitem" src="http://www.stickpng.com/assets/thumbs/5a5a8a2214d8c4188e0b08e4.png" alt="">
+                  <img id="newitem" src="/storage/new.png" alt="">
                 </div>
                 <div class="price">
                   $2399
@@ -155,6 +155,6 @@
           </div>
         </section>
         <span class="background"></span>
-      
+
 
 @endsection

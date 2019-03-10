@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=Anton|Raleway:400,700|Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-   <link rel="shortcut icon" type="image/png" href="pics/favicon.ico"/>
+   <link rel="shortcut icon" type="image/png" href="storage/favicon.ico"/>
    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
@@ -33,7 +33,7 @@
 
         <div class="dropdown">
             <div class="user" >
-              <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{Auth::user()->name}}"/></a>
+              <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="storage/{{Auth::user()->avatar}}"/></a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="/perfil">Ver Perfil</a>
                 <div class="dropdown-divider"></div>
@@ -57,7 +57,7 @@
                 </form> -->
               </div>
             </div>
-            <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola <strong>{{Auth::user()->name}}</strong></a>
+            <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola <strong>{{explode(' ', trim(Auth::user()->name))[0]}}</strong></a>
           </div>
        </div>
 @else
