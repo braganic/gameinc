@@ -30,12 +30,12 @@ Route::get('/search', "ProductsController@search");
 
 Route::get('/category', "ProductsController@category");
 
-Route::get('/create', "ProductsController@create");
+Route::get('/create', "ProductsController@create")->middleware('admin');
 
-Route::post('/create', "ProductsController@save");
+Route::post('/create', "ProductsController@save")->middleware('admin');
 
 Route::get('/perfil', "UserController@show")->middleware('auth');
 
-Route::get('registeradmin', "AdminController@add")->middleware('admin');
+Route::get('/registeradmin', "AdminController@add")->middleware('admin');
 
-Route::post('registeradmin', "AdminController@store");
+Route::post('/registeradmin', "AdminController@store")->middleware('admin');
