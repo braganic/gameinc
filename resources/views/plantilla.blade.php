@@ -1,3 +1,18 @@
+<?php
+if (!session('css')) {
+  session(['css' => 'styles.css']);
+}
+
+if (isset($_GET['changeCSS'])) {
+  if (session('css') == 'styles.css') {
+    session(['css' => 'styles2.css']);
+  } else {
+    session(['css' => 'styles.css']);
+  }
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,7 +23,7 @@
    <link href="https://fonts.googleapis.com/css?family=Anton|Raleway:400,700|Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    <link rel="shortcut icon" type="image/png" href="storage/favicon.ico"/>
-   <link rel="stylesheet" href="/css/styles.css">
+   <link rel="stylesheet" href="/css/{{session('css')}}">
    <link rel="stylesheet" href="/css/@yield('css')">
   </head>
   <body>
@@ -52,6 +67,7 @@
               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="storage/{{Auth::user()->avatar}}"/></a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="/perfil">Ver Perfil</a>
+                <a class="dropdown-item" href="/?changeCSS=true">Cambiar tema</a>
                 <div class="dropdown-divider"></div>
 
 
