@@ -50,6 +50,11 @@
       {{csrf_field()}}
       <button type="Submit" name="button" class="btn btn-success">Finalizar compra</button>
     </form>
+    <br>
+    <form action="/products" method="get">
+      {{ csrf_field() }}
+      <button type="submit" name="button2" class= "btn btn-danger"> Ver más productos</button>
+    </form>
       @else
       <p>El carrito se encuentra vacío.</p>
       @endif
