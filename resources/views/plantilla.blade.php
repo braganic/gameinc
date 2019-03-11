@@ -87,7 +87,7 @@
         <a class="dropdown-item" href="\register">Registro</a>
       </div>
     </div>
-    <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Usuario&#9660</strong></a>
+    <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Cuenta&#9660</strong></a>
   </div>
 </div>
 
