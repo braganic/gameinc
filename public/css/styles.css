@@ -118,6 +118,8 @@ a {
 
 .dropdown-menu.show {
   margin-top: 33px;
+  margin-right: 35px;
+  /* background-color: rgb(244, 166, 7); */
 }
 
 .cart.show .dropdown-menu.show {
@@ -126,8 +128,8 @@ a {
 
 #dropdownText {
   color: white;
-  text-decoration: none;
-  font-size: 14px;
+  text-decoration:none;
+  font-size: 16px;
   font-family: "Gotham-Light", sans-serif;
   display: flex;
   height: 40px;
@@ -135,10 +137,17 @@ a {
   flex-wrap: wrap;
   align-items: flex-end;
   padding-top: 15px;
+  margin-top: 1px;
 }
 
-.dropdown {
+.dropdown1 {
+  float: right;
+  margin-right: 40px;
+}
+
+.dropdown2 {
   float: left;
+  margin-right: 50px;
 }
 
 .carousel {

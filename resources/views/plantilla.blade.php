@@ -23,7 +23,7 @@
      <div class="logo">
        <a href="/">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
      </div>
-     <div id="menu1"class="dropdown">
+     <div id="menu1"class="dropdown1">
          {{-- <div class="user" > --}}
            {{-- <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a> --}}
            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -47,7 +47,7 @@
      </div>
 @if (Auth::check())
 
-        <div class="dropdown">
+        <div class="dropdown2">
             <div class="user" >
               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="storage/{{Auth::user()->avatar}}"/></a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -78,7 +78,7 @@
        </div>
 @else
 
-<div class="dropdown">
+<div class="dropdown2">
     <div class="user" >
       <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -87,7 +87,7 @@
         <a class="dropdown-item" href="\register">Registro</a>
       </div>
     </div>
-    <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar <strong>Cuenta&#9660</strong></a>
+    <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Usuario&#9660</strong></a>
   </div>
 </div>
 

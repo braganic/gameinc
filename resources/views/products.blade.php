@@ -24,7 +24,7 @@
     @foreach ($products as $product)
 
         <div class="card" style="width: 18rem; margin: 35px; display: inline-block;">
-      <img class="card-img-top" src="/storage/{{$product->foto}}" alt="{{$product->name}}" width="223" height="281">
+      <img class="card-img-top" src="/storage/{{$product->foto}}" alt="{{$product->name}}" width="223" height="381">
       <div class="card-body">
         <h5 class="card-title">{{$product->name}}</h5>
         <p class="card-text">Precio: ${{$product->price}}</p>
