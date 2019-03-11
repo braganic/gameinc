@@ -19,8 +19,8 @@ class AdminController extends Controller
         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         'password' => ['required', 'string', 'min:8', 'confirmed'],
         'avatar' => ['required', 'image'],
-        'country' => ['required'],
-        'terms' => ['required'],
+        // 'country' => ['required'],
+        // 'terms' => ['required'],
         ]);
 
         $poster = $data["avatar"];
@@ -30,7 +30,7 @@ class AdminController extends Controller
               'name' => $data['name'],
               'email' => $data['email'],
               'password' => Hash::make($data['password']),
-              'country' => $data['country'],
+              'country' => null,
               'cities' => null,
               'avatar' => $nombreDelArchivo,
               'type' => 2

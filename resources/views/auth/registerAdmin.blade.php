@@ -61,7 +61,7 @@ Registro
             <p>&nbsp;</p>
           </div>
 
-  <div class="form-item">
+  {{-- <div class="form-item">
     <label>Pais:</label>
     <select class="form-control {{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" id="country">
         <option value="">Elegí</option>
@@ -76,7 +76,7 @@ Registro
 <div class="form-item d-none" id="citiesCol">
 <label>Provincia</label>
 <select class="form-control" name="cities" id="cities"></select>
-</div>
+</div> --}}
 
 
 					<div class="form-items-profile">
@@ -98,14 +98,7 @@ Registro
 
 				<!-- </div> -->
 <br>
-          <div class="form-items-agree">
-              <label for="agree">Acepto los terminos y condiciones</label>
-							<input type="checkbox" name="terms" value="checkbox">
-              @if ($errors->has('terms'))
-                                  <span class="invalid-feedback" role="alert" style="display: block;">
-                                      <strong>{{ $errors->first('terms') }}</strong>
-                                  </span>
-                              @endif
+
 
           </div>
               <input class="form-items"id="register-submit"type="submit" name="submit" value="REGISTRATE">

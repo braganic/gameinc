@@ -8,6 +8,10 @@ a {
   color: inherit;
 }
 
+#menu1 {
+  margin-bottom: 15px;
+}
+
 .nav-container {
   display: flex;
   width: 100%;
@@ -645,7 +649,7 @@ li {
 }
 
 .form-items-profile {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
   width: 100%;
   margin-left: 0px;
@@ -658,7 +662,7 @@ li {
 .form-items-agree {
   text-align: center;
   width: 100%;
-  margin-top: 0px;
+  margin-top: -27px;
   /* font-family: 'Anton'; */
 }
 

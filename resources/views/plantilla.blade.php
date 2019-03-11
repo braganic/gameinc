@@ -22,6 +22,21 @@
      <div class="logo">
        <a href="/">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
      </div>
+     <div id="menu1"class="dropdown">
+         {{-- <div class="user" > --}}
+           {{-- <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" ></i></a> --}}
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+             <a class="dropdown-item" href="\products">Products</a>
+             <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="\">Home</a>
+             <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="\">About</a>
+
+           {{-- </div> --}}
+         </div>
+         <a href="#" role="button" id="dropdownText" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>MENU&#9660</strong></a>
+       </div>
+     </div>
      <div class="searchbar">
        <form action="/search" method="get">
          {{csrf_field()}}
