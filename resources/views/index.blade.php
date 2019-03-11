@@ -61,13 +61,16 @@
               @foreach ($prodList as $product)
               <div class="product-container">
                 <div class="cover">
-                  <img src="{{$product->foto}}" alt="">
+                  <img src="/storage/{{$product->foto}}"" alt="">
                 </div>
                 <div class="price">
                   {{$product->price}}
                 </div>
                 <div class="buynow">
-                  <input type="submit" name="buynow" value="COMPRAR AHORA">
+                  {{-- <input type="submit" name="buynow" value="COMPRAR AHORA"> --}}
+                  <form method="get" action="/products/{{$product->id}}">
+                    <input type="submit" name="buynow" value="COMPRAR AHORA">
+                  </form>
                 </div>
               </div>
               @endforeach

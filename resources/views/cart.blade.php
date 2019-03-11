@@ -25,7 +25,7 @@
       <tr>
         <td>
           <a href="/products/{{$product->id}}">
-            <img src="{{$product->foto}}" alt="" height="50" width="50">
+            <img src="/storage/{{$product->foto}}" alt="" height="50" width="50">
           </a>
         </td>
         <td>
