@@ -2,35 +2,41 @@
 
 @section("titulo")
   Busqueda
-@endsection
+  @endsection
 
 @section("principal")
-
-<h1>Resultados de la búsqueda:</h1>
-<table class="table table-striped">
-  <thead>
+<div class="container">
+  <h1>Resultados de la búsqueda:</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    @foreach ($products as $product)
     <tr>
-      <th scope="col">Imagen</th>
-      <th scope="col">Producto</th>
-      <th scope="col">Precio</th>
+      <td>
+        <a href="/products/{{$product->id}}">
+          <img src="/storage/{{$product->foto}}" alt="" height="150" width="150">
+        </a>
+      </td>
+      <td>
+        <a href="/products/{{$product->id}}" style="font-size: 1.5rem;">
+          {{$product->name}}
+        </a>
+        <div class="">
+          $ {{$product->price}}
+        </div>
+        <div class="">
+          <a href="/products/{{$product->id}}" class="btn btn-danger">Ver detalle</a>
+        </div>
+      </td>
     </tr>
-  </thead>
-  @foreach ($products as $product)
-  <tr>
-    <td>
-      <a href="/products/{{$product->id}}">
-        <img src="/storage/{{$product->foto}}" alt="" height="50" width="50">
-      </a>
-    </td>
-    <td>
-      <a href="/products/{{$product->id}}">
-        {{$product->name}}
-      </a>
-    </td>
-    <td>
-        $ {{$product->price}}
-    </td>
-  </tr>
-  @endforeach
+@endforeach
+
+</table>
+</div>
+
 
 @endsection
