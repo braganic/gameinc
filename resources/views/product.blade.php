@@ -14,7 +14,7 @@
     <div class="img-container">
 
             <!-- Button trigger modal -->
-      <a href="/" class="" data-toggle="modal" data-target="#exampleModal">a
+      <a href="/" class="" data-toggle="modal" data-target="#exampleModal">
         <img src="/storage/{{$product->foto}}" alt="">
       </a>
 
