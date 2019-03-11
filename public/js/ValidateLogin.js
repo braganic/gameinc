@@ -23,9 +23,9 @@ $(document).ready(function() {
   passwordInput.onblur = function () {
     var inputValue = this.value.trim();
     var alertMsg = this.parentElement.querySelector('.invalid-feedback');
-    if (inputValue === '' || inputValue.length < 6) {
+    if (inputValue === '' || inputValue.length < 8) {
       this.classList.add('is-invalid');
-      alertMsg.innerHTML = 'La <b>contraseña</b> no puede estar vacía y debe tener al menos 6 caracteres';
+      alertMsg.innerHTML = 'La <b>contraseña</b> no puede estar vacía y debe tener al menos 8 caracteres';
     } else {
       this.classList.remove('is-invalid');
       this.classList.add('is-valid');

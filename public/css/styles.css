@@ -24,69 +24,6 @@ a {
   display: none;
 }
 
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-}
-.hamburger:hover {
-  opacity: 0.7;
-}
-.hamburger.is-active:hover {
-  opacity: 0.7;
-}
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: #fff;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  background-color: red;
-  border-radius: 4px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-.hamburger-inner::before,
-.hamburger-inner::after {
-  content: "";
-  display: block;
-}
-.hamburger-inner::before {
-  top: -10px;
-}
-.hamburger-inner::after {
-  bottom: -10px;
-}
-
 .logo a {
   font-family: "Anton";
   font-size: 32px;
@@ -582,11 +519,11 @@ li {
   padding-left: 6px;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.login-box input,
+.login-box input {
   /* border: none; */
   color: rgb(15, 84, 221);
-  border: 1px solid #398ef2;
+  border: 2px solid #398ef2;
   padding: 8px;
   border-radius: 5px;
 }
@@ -675,7 +612,7 @@ li {
 
 .register input {
   color: rgb(15, 84, 221);
-  border: 1px solid #398ef2;
+  border: 2px solid #398ef2;
   padding: 8px;
   border-radius: 5px;
 }
