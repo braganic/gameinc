@@ -6,9 +6,14 @@
   display: inline-block;
 }
 
-.product-left img {
+.img-container {
   width: 446px;
   height: 562px;
+}
+
+.product-left img {
+  width: 80%;
+  height: 80%;
 }
 
 .product-right {

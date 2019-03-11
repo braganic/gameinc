@@ -11,7 +11,10 @@
 <div class="container">
 
   <div class="product-left">
-    <img src="/storage/{{$product->foto}}" alt="">
+    <div class="img-container">
+      <img src="/storage/{{$product->foto}}" alt="">
+    </div>
+
   </div>
   <div class="product-right">
     <h2>{{$product->name}}</h2>
