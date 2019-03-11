@@ -58,75 +58,20 @@
         <section class="main-categories">
           <div class="top-products">
             <div class="product-row">
+              @foreach ($prodList as $product)
               <div class="product-container">
                 <div class="cover">
-                  <img src="/storage/red2.jpg" alt="">
-                  <img id="newitem" src="/storage/new.png" alt="">
+                  <img src="{{$product->foto}}" alt="">
                 </div>
                 <div class="price">
-                  $2399
+                  {{$product->price}}
                 </div>
                 <div class="buynow">
                   <input type="submit" name="buynow" value="COMPRAR AHORA">
                 </div>
               </div>
-              <div class="product-container">
-                <div class="cover">
-                  <img src="/storage/fifa19.jpg" alt="">
-                </div>
-                <div class="price">
-                  $1999
-                </div>
-                <div class="buynow">
-                  <input type="submit" name="buynow" value="COMPRAR AHORA">
-                </div>
-              </div>
-              <div class="product-container">
-                <div class="cover">
-                  <img src="/storage/titan.jpg" alt="">
-                </div>
-                <div class="price">
-                  $1499
-                </div>
-                <div class="buynow">
-                  <input type="submit" name="buynow" value="COMPRAR AHORA">
-                </div>
-              </div>
-            </div>
-          <div class="product-row">
-            <div class="product-container">
-              <div class="cover">
-                <img src="/storage/acreed.jpg" alt="">
-              </div>
-              <div class="price">
-                $2399
-              </div>
-              <div class="buynow">
-                <input type="submit" name="buynow" value="COMPRAR AHORA">
-              </div>
-            </div>
-            <div class="product-container">
-              <div class="cover">
-                <img src="/storage/battlefield.jpg" alt="">
-              </div>
-              <div class="price">
-                $2199
-              </div>
-              <div class="buynow">
-                <input type="submit" name="buynow" value="COMPRAR AHORA">
-              </div>
-            </div>
-            <div class="product-container">
-              <div class="cover">
-                <img src="/storage/fallout.jpg" alt="">
-              </div>
-              <div class="price">
-                $1199
-              </div>
-              <div class="buynow">
-                <input type="submit" name="buynow" value="COMPRAR AHORA">
-              </div>
-            </div>
+              @endforeach
+
           </div>
           </div>
 
@@ -154,7 +99,7 @@
             </div>
           </div>
         </section>
-        
+
 
 
 @endsection
