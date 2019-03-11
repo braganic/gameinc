@@ -1,6 +1,8 @@
 @extends('plantilla')
+<?php
+  $total = 0
+ ?>
 
-{{$total = 0}}
 
 @section("titulo")
   Carrito

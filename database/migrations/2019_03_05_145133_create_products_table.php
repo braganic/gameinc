@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
           $table->increments('id');
           $table->string("name", 255);
           $table->unsignedInteger("stock")->nullable();
-          $table->double("price", 8, 2)->nullable();
+          $table->double("price", 8, 2);
           $table->unsignedInteger("brand_id");
           $table->unsignedInteger("category_id");
           $table->string('foto');

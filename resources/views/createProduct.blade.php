@@ -30,6 +30,11 @@ Crear Producto
 
               <p>&nbsp;</p>
           </div>
+          <div class="form-items">
+            <input class="form-control" type="text" name="price" value="" placeholder="Stock" autofocus>
+
+              <p>&nbsp;</p>
+          </div>
 
 
           <div class="form-item">
@@ -54,7 +59,7 @@ Crear Producto
 					<div class="form-items-profile">
 						<label for="file-upload" class="custom-file-upload" name="foto" value="foto">Subir foto del producto</label>
 						 <input id="file-upload" class="form-control" type="file" name="foto"/>
-            
+
             <p>&nbsp;</p>
 					</div>
 
