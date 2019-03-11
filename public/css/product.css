@@ -1,0 +1,29 @@
+.product-left {
+  padding-top: 50px;
+  position: relative;
+  top: -116px;
+  width: 45%;
+  display: inline-block;
+}
+
+.product-left img {
+  width: 446px;
+  height: 562px;
+}
+
+.product-right {
+  padding-top: 50px;
+  padding-left: 30px;
+  position: relative;
+  top: 0px;
+  width: 50%;
+  display: inline-block;
+}
+
+.product-right h3 {
+  margin-bottom: 35px;
+}
+
+.product-right ul {
+  margin-bottom: 35px;
+}

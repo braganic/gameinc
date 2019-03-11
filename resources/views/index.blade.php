@@ -61,7 +61,7 @@
               @foreach ($prodList as $product)
               <div class="product-container">
                 <div class="cover">
-                  <img src="/storage/{{$product->foto}}"" alt="">
+                  <img src="/storage/{{$product->foto}}"" alt="" witdh="223" height="281">
                 </div>
                 <div class="price">
                   {{$product->price}}
