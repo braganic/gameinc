@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +25,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+      $products = Product::all();
+      $max = count($products);
+      $prodList = [];
+      $randList = [];
+
+
+      for ($i=0; count($prodList) <6 ; $i++) {
+        $rand = rand(1,$max);
+        if (!in_array($rand, $randList)) {
+          $prodList[] = $products[$rand];
+        }
+      }
+
+        return view('index', compact("prodList"));
     }
 }
