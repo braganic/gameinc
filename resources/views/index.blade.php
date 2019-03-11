@@ -154,7 +154,7 @@
             </div>
           </div>
         </section>
-        <span class="background"></span>
+        
 
 
 @endsection

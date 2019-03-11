@@ -202,7 +202,6 @@ a {
 
 .carousel {
   position: relative;
-  top: 35px;
 }
 
 .links-section {
@@ -223,6 +222,11 @@ a {
 .desc {
   float: left;
   margin: 20px;
+}
+
+main {
+  padding-top: 70px;
+  min-height: 500px;
 }
 
 .links-section i {
@@ -692,7 +696,7 @@ li {
   color: blue;
 }
 
-.custom-file-upload:hover{
+.custom-file-upload:hover {
   color: white;
   background-color: rgba(57, 142, 242, 0.5);
 }
@@ -702,7 +706,6 @@ li {
   text-align: center;
   width: 100%;
 }
-
 
 .form-items-profile {
   margin-top: 30px;
