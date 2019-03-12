@@ -15,7 +15,7 @@ a {
 .nav-container {
   display: flex;
   width: 100%;
-  background-color: #008b8b;
+  background-color:rgba(233, 147, 1, 1);
 
   position: fixed;
   align-items: center;
@@ -52,7 +52,9 @@ a {
 
 .searchbar #searchtext {
   width: 90%;
-  border: none;
+  /* border: none; */
+  border: 2px solid rgb(0, 0, 0);
+
   height: 23px;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -61,8 +63,8 @@ a {
 
 .searchbar #submit {
   width: 5%;
-  background-color: #398ef2;
-  border: none;
+  background-color: rgb(176, 17, 17);
+  border: 2px solid rgb(0, 0, 0);
   height: 23px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -77,9 +79,10 @@ a {
 
 .background {
   content: "";
-  background-color: rgb(60, 209, 202);
+  /* background-color: rgb(60, 209, 202); */
+  background-image: url(/storage/fire.jpg);
   height: 2500px;
-  opacity: 0.1;
+  /* opacity: 0.1; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -127,7 +130,7 @@ a {
 }
 
 #dropdownText {
-  color: white;
+  color: black;
   text-decoration:none;
   font-size: 16px;
   font-family: "Gotham-Light", sans-serif;
@@ -289,8 +292,8 @@ main {
 }
 
 footer {
-  background-color: #008b8b;
-  
+  background-color:rgba(233, 147, 1, 1);
+
   margin-top: 100px;
   width: 100%;
   z-index: 2;
@@ -307,7 +310,7 @@ footer {
 .footer-column2,
 .footer-column3 {
   float: left;
-  color: white;
+  color: black;
   width: 20%;
   padding: 100px 0px;
 }
@@ -315,7 +318,7 @@ footer {
 .footer-column1,
 .footer-column4 {
   float: left;
-  color: white;
+  color: black;
   width: 30%;
   padding: 50px 100px;
 }
