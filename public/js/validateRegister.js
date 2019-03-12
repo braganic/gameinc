@@ -6,52 +6,50 @@ $(document).ready(function() {
   var emailInput = document.getElementById("register-email");
   var passwordInput = document.getElementById("register-password");
 
-
-  usernameInput.onblur = function () {
-  	var inputValue = this.value.trim();
-  	var alertMsg = this.parentElement.querySelector('.invalid-feedback');
-  	if (inputValue === '' || inputValue.length < 3) {
-  		this.classList.add('is-invalid');
-  		alertMsg.innerHTML = 'El <b>nombre</b> no puede estar vacío';
-  	} else {
-  		this.classList.remove('is-invalid');
-  		this.classList.add('is-valid');
-  		alertMsg.innerHTML = '';
-  	}
+  usernameInput.onblur = function() {
+    var inputValue = this.value.trim();
+    var alertMsg = this.parentElement.querySelector(".invalid-feedback");
+    if (inputValue === "" || inputValue.length < 3) {
+      this.classList.add("is-invalid");
+      alertMsg.innerHTML = "El <b>nombre</b> no puede estar vacío";
+    } else {
+      this.classList.remove("is-invalid");
+      this.classList.add("is-valid");
+      alertMsg.innerHTML = "";
+    }
   };
-
 
   var regexEmail = /\S+@\S+\.\S+/;
 
- emailInput.onblur = function () {
- 	var inputValue = this.value.trim();
- 	var alertMsg = this.parentElement.querySelector('.invalid-feedback');
- 	if (inputValue === '') {
- 		this.classList.add('is-invalid');
- 		alertMsg.innerHTML = 'El <b>email</b> no puede estar vacío';
- 	} else if (!regexEmail.test(inputValue)) {
- 		this.classList.add('is-invalid');
- 		alertMsg.innerHTML = 'El formato de email no es un email valido';
- 	} else {
- 		this.classList.remove('is-invalid');
- 		this.classList.add('is-valid');
- 		alertMsg.innerHTML = '';
- 	}
- };
+  emailInput.onblur = function() {
+    var inputValue = this.value.trim();
+    var alertMsg = this.parentElement.querySelector(".invalid-feedback");
+    if (inputValue === "") {
+      this.classList.add("is-invalid");
+      alertMsg.innerHTML = "El <b>email</b> no puede estar vacío";
+    } else if (!regexEmail.test(inputValue)) {
+      this.classList.add("is-invalid");
+      alertMsg.innerHTML = "El formato de email no es un email valido";
+    } else {
+      this.classList.remove("is-invalid");
+      this.classList.add("is-valid");
+      alertMsg.innerHTML = "";
+    }
+  };
 
- passwordInput.onblur = function () {
-   var inputValue = this.value.trim();
-   var alertMsg = this.parentElement.querySelector('.invalid-feedback');
-   if (inputValue === '' || inputValue.length < 6) {
-     this.classList.add('is-invalid');
-     alertMsg.innerHTML = 'La <b>contraseña</b> no puede estar vacía y debe tener al menos 6 caracteres';
-   } else {
-     this.classList.remove('is-invalid');
-     this.classList.add('is-valid');
-     alertMsg.innerHTML = '';
-   }
- };
-
+  passwordInput.onblur = function() {
+    var inputValue = this.value.trim();
+    var alertMsg = this.parentElement.querySelector(".invalid-feedback");
+    if (inputValue === "" || inputValue.length < 6) {
+      this.classList.add("is-invalid");
+      alertMsg.innerHTML =
+        "La <b>contraseña</b> no puede estar vacía y debe tener al menos 6 caracteres";
+    } else {
+      this.classList.remove("is-invalid");
+      this.classList.add("is-valid");
+      alertMsg.innerHTML = "";
+    }
+  };
 
   function fetchCall(url, callback) {
     window
@@ -98,11 +96,15 @@ $(document).ready(function() {
     var fileName = e.target.files[0].name;
     var botonPerfil = document.getElementsByClassName("custom-file-upload")[0];
     var extension = fileName.split(".").pop();
-    console.log(filename)
-    console.log(botonPerfil)
-    console.log(extension)
 
-    if (extension == "jpg" || extension == "jpeg" || extension == "png") {
+    if (
+      extension == "jpg" ||
+      extension == "jpeg" ||
+      extension == "png" ||
+      extension == "JPEG" ||
+      extension == "JPG" ||
+      extension == "PNG"
+    ) {
       botonPerfil.innerHTML = fileName;
       botonPerfil.style.border = "1px solid green";
     } else {
