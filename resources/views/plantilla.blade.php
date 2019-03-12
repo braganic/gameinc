@@ -38,8 +38,6 @@ if (isset($_GET['changeCSS'])) {
              <a class="dropdown-item" href="\products">Products</a>
              <div class="dropdown-divider"></div>
              <a class="dropdown-item" href="\">Home</a>
-             <div class="dropdown-divider"></div>
-             <a class="dropdown-item" href="\">About</a>
 
            {{-- </div> --}}
          </div>
@@ -61,6 +59,9 @@ if (isset($_GET['changeCSS'])) {
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="/perfil">Ver Perfil</a>
                 <a class="dropdown-item" href="/?changeCSS=true">Cambiar tema</a>
+                @if (auth()->user()->type == 2)
+                <a class="dropdown-item" href="/create">Crear producto</a>
+                @endif
                 <div class="dropdown-divider"></div>
 
 
