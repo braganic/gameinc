@@ -26,18 +26,18 @@ class HomeController extends Controller
     public function index()
     {
       $products = Product::all();
-      $max = count($products);
+      $max = count($products)-1;
       $prodList = [];
       $randList = [];
 
 
       for ($i=0; count($prodList) <6 ; $i++) {
-        $rand = rand(1,$max);
+        $rand = rand(0,$max);
         if (!in_array($rand, $randList)) {
           $prodList[] = $products[$rand];
+          $randList[] = $rand;
         }
       }
-
         return view('index', compact("prodList"));
     }
 }

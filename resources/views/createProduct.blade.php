@@ -31,7 +31,7 @@ Crear Producto
               <p>&nbsp;</p>
           </div>
           <div class="form-items">
-            <input class="form-control" type="text" name="price" value="" placeholder="Stock" autofocus>
+            <input class="form-control" type="text" name="price" value="" placeholder="Precio" autofocus>
 
               <p>&nbsp;</p>
           </div>

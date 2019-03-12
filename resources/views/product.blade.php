@@ -14,7 +14,7 @@
     <div class="img-container">
 
             <!-- Button trigger modal -->
-      <a href="/" class="" data-toggle="modal" data-target="#exampleModal">a
+      <a href="/" class="" data-toggle="modal" data-target="#exampleModal">
         <img src="/storage/{{$product->foto}}" alt="">
       </a>
 
@@ -65,11 +65,13 @@
        <form action="/addToCart/{{$product->id}}" method="post">
         {{csrf_field()}}
         <button type="Submit" name="button" class="btn btn-success">Añadir al carrito</button>
-       </form>
+      </form>
+      @else
+      <p>El producto ya fue añadido al carrito</p>
+      <a href="/cart" class="btn btn-danger">Ver carrito</a>
+      @endif
   </div>
 </div>
 
 
-
-  @endif
   @endsection

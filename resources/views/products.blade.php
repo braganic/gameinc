@@ -12,6 +12,7 @@
     <form action="/category" method="get">
       {{csrf_field()}}
       <select class="" name="category">
+        <option value="null">Elegir</option>
         @foreach ($categories as $category)
           <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
