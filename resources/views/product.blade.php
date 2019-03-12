@@ -62,11 +62,11 @@
           <button type="Submit" name="button" class="btn btn-success">Añadir al carrito</button>
         </form>
         @else
-        <div class="container" style="background-color:rgba(39, 244, 13, 0.4); border: 1px solid rgb(34, 233, 84); border-radius:5px">
+        <div class="container" style="background-color:rgba(39, 244, 13, 0.4); border: 1px solid rgb(34, 233, 84); border-radius:5px; margin-top: -30px;">
         <p>El producto ya fue añadido al carrito!</p>
       </div>
       <br>
-        <a href="/cart" class="btn btn-info">Ver carrito</a>
+        <a href="/cart" class="btn btn-info" style="margin-top:-10px;">Ver carrito</a>
         @endif
 
 
