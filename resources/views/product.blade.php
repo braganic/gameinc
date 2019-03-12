@@ -54,12 +54,14 @@
       </li>
     </ul>
 
+  @if (Auth::check())
     @if (auth()->user()->type == 2)
      <form class="" action="/deleteProduct" method="post">
      {{ csrf_field() }}
      <input type="hidden" name="idProduct" value="{{$product->id}}">
      <button type="submit" name="button" class="btn btn-danger">Eliminar producto</button>
     @endif
+  @endif  
 
       @if (!$cart->contains($product))
        <form action="/addToCart/{{$product->id}}" method="post">
