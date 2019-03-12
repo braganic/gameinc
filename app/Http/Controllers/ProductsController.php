@@ -34,7 +34,7 @@ class ProductsController extends Controller
 
     public function viewCart() {
       $cart = new Cart();
-      
+
       return view("cart");
     }
 
@@ -65,6 +65,13 @@ class ProductsController extends Controller
       $categories = Category::paginate();
 
       return view('products', compact("products","categories"));
+    }
+
+    public function delete(Request $form) {
+      $idProduct = $form["idProduct"];
+      $product = Product::find($idProduct);
+      $product->delete();
+      return redirect("/products");
     }
 
     public function create() {

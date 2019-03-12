@@ -30,6 +30,8 @@ Route::get('/search', "ProductsController@search");
 
 Route::get('/category', "ProductsController@category");
 
+Route::post('/deleteProduct', "ProductsController@delete")->middleware('admin');
+
 Route::get('/create', "ProductsController@create")->middleware('admin');
 
 Route::post('/create', "ProductsController@save")->middleware('admin');

@@ -34,6 +34,8 @@
     </div>
 
   </div>
+
+</form>
   <div class="product-right">
     <h2>{{$product->name}}</h2>
     <h3>
@@ -52,11 +54,18 @@
       </li>
     </ul>
 
+    @if (auth()->user()->type == 2)
+     <form class="" action="/deleteProduct" method="post">
+     {{ csrf_field() }}
+     <input type="hidden" name="idProduct" value="{{$product->id}}">
+     <button type="submit" name="button" class="btn btn-danger">Eliminar producto</button>
+    @endif
+
       @if (!$cart->contains($product))
-      <form action="/addToCart/{{$product->id}}" method="post">
+       <form action="/addToCart/{{$product->id}}" method="post">
         {{csrf_field()}}
         <button type="Submit" name="button" class="btn btn-success">Añadir al carrito</button>
-      </form>
+       </form>
   </div>
 </div>
 
