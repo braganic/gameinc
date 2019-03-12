@@ -35,9 +35,9 @@ class HomeController extends Controller
         $rand = rand(1,$max);
         if (!in_array($rand, $randList)) {
           $prodList[] = $products[$rand];
+          $randList[] = $rand;
         }
       }
-
         return view('index', compact("prodList"));
     }
 }
