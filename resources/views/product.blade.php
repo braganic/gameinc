@@ -57,10 +57,12 @@
         {{csrf_field()}}
         <button type="Submit" name="button" class="btn btn-success">Añadir al carrito</button>
       </form>
+      @else
+      <p>El producto ya fue añadido al carrito</p>
+      <a href="/cart" class="btn btn-danger">Ver carrito</a>
+      @endif
   </div>
 </div>
 
 
-
-  @endif
   @endsection
