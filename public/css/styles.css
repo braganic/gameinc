@@ -196,7 +196,7 @@ main {
 
 .product-container {
   width: 195px;
-  height: 335px;
+  height: 405px;
   margin: 150px 0px 0px 0px;
   display: flex;
   flex-wrap: wrap;
@@ -232,10 +232,10 @@ main {
 .buynow input {
   border: none;
   border-bottom: 1px solid red;
-  margin: 5px 30px;
+  margin: 5px 15px;
   outline: none;
   height: 40px;
-  background-color: rgba(255, 0, 0, 0.85);
+  background-color: rgba(255, 0, 0, 0.6);
   color: #fff;
   font-size: 18px;
   border-radius: 5px;
