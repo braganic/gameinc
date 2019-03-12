@@ -77,6 +77,7 @@
            <form class="" action="/deleteProduct" method="post">
            {{ csrf_field() }}
            <input type="hidden" name="idProduct" value="{{$product->id}}">
+           <br>
            <button type="submit" name="button" class="btn btn-danger">Eliminar producto</button>
           @endif
         @endif
