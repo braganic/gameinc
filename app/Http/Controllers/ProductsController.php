@@ -34,7 +34,7 @@ class ProductsController extends Controller
 
     public function viewCart() {
       $cart = new Cart();
-      
+
       return view("cart");
     }
 
@@ -61,7 +61,12 @@ class ProductsController extends Controller
     public function category(Request $req) {
       $search = $req["category"];
       $category = Category::find($search);
-      $products = Product::where("category_id", "like", "$category->id")->get();
+      if ($search == 'null') {
+        $products = Product::all();
+      } else {
+        $products = Product::where("category_id", "like", "$category->id")->get();
+      }
+
       $categories = Category::paginate();
 
       return view('products', compact("products","categories"));
