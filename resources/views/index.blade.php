@@ -63,7 +63,7 @@ GAMEINC - Tu tienda de videojuegos
         <section class="main-categories">
           <div class="top-products">
             <div class="product-row">
-              @if ($prodList)
+
               @foreach ($prodList as $product)
               <div class="product-container">
                 <div class="cover">
@@ -79,7 +79,7 @@ GAMEINC - Tu tienda de videojuegos
                 </div>
               </div>
               @endforeach
-              @endif
+
 
           </div>
           </div>

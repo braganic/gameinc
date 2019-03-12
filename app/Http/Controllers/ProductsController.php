@@ -32,6 +32,18 @@ class ProductsController extends Controller
 
     }
 
+    public function removeFromCart($id) {
+      $product = Product::find($id);
+      $products = session()->pull('cart', []); // Second argument is a default value
+      if(($key = array_search($product, $products)) !== false) {
+          unset($products[$key]);
+      }
+      session()->put('cart', $products);
+
+      return redirect('/cart');
+
+    }
+
     public function viewCart() {
       $cart = new Cart();
 

@@ -22,6 +22,8 @@ Route::get('/products/{id}', "ProductsController@show");
 
 Route::post('/addToCart/{id}', "ProductsController@addToCart");
 
+Route::post('/removeFromCart/{id}', "ProductsController@removeFromCart");
+
 Route::get('/cart', "ProductsController@viewCart");
 
 Route::post('/cart', "ProductsController@finishCheckout")->middleware('auth');
