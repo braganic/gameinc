@@ -75,19 +75,6 @@ a {
   cursor: pointer;
 }
 
-.background {
-  content: "";
-  background-image: url(/storage/background.jpg);
-  height: 2500px;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
 .user,
 .cart {
   float: left;
@@ -152,6 +139,7 @@ a {
 
 .carousel {
   position: relative;
+  top: -13px;
 }
 
 .links-section {
@@ -170,11 +158,11 @@ a {
 .icon,
 .desc {
   float: left;
-  margin: 20px;
+  margin: 18px;
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 95px;
   min-height: 500px;
 }
 
@@ -207,9 +195,9 @@ main {
 }
 
 .product-container {
-  width: 225px;
-  height: 385px;
-  margin: 150px auto 0px auto;
+  width: 195px;
+  height: 335px;
+  margin: 150px 0px 0px 0px;
   display: flex;
   flex-wrap: wrap;
   background: white;
@@ -357,9 +345,6 @@ li {
 }
 
 @media only screen and (max-width: 1710px) {
-  .background {
-    height: 2800px;
-  }
 
   .top-products {
     margin-top: 50px;
@@ -375,9 +360,6 @@ li {
 }
 
 @media only screen and (max-width: 1450px) {
-  .background {
-    height: 2990px;
-  }
 
   .links-section {
     width: 97%;
@@ -399,9 +381,6 @@ li {
 }
 
 @media only screen and (max-width: 1150px) {
-  .background {
-    height: 3430px;
-  }
 
   #dropdownText {
     display: none;
@@ -426,9 +405,6 @@ li {
 }
 
 @media only screen and (max-width: 880px) {
-  .background {
-    height: 5430px;
-  }
 
   .container-button-hamburgers {
     position: relative;
@@ -447,7 +423,7 @@ li {
   }
 
   .carousel {
-    top: 45px;
+    top: -4px;
   }
 
   .links-section {
@@ -468,9 +444,6 @@ li {
 }
 
 @media only screen and (max-width: 532px) {
-  .background {
-    height: 4850px;
-  }
 
   .links-section {
     font-size: 10px;
@@ -565,18 +538,6 @@ li {
   cursor: pointer;
 }
 
-.background-login {
-  content: "";
-  background-image: url(/storage/background.jpg);
-  height: 100%;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
 
 .recordame input,
 .recordame label {
@@ -591,7 +552,6 @@ li {
   width: 100%;
   height: 680px;
   position: relative;
-  top: 130px;
   margin-left: auto;
   margin-right: auto;
 }

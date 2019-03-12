@@ -28,13 +28,6 @@ if (isset($_GET['changeCSS'])) {
   </head>
   <body>
     <nav class="nav-container">
-     <div class="container-button-hamburgers">
-       <button class="hamburger hamburger--collapse" type="button">
-         <span class="hamburger-box">
-           <span class="hamburger-inner"></span>
-         </span>
-        </button>
-     </div>
      <div class="logo">
        <a href="/">GAME<span style="color:#FC1B1A; margin-left:2px">INC</span></a>
      </div>

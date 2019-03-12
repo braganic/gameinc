@@ -4,7 +4,7 @@
   position: relative;
   top: -116px;
   width: 45%;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .img-container {
