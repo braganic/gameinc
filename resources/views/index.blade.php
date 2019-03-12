@@ -1,6 +1,11 @@
 @extends('plantilla')
 
+@section("titulo")
+GAMEINC - Tu tienda de videojuegos
+  @endsection
+
 @section('principal')
+
 
 
         <section class="carousel">
@@ -58,22 +63,23 @@
         <section class="main-categories">
           <div class="top-products">
             <div class="product-row">
+              @if ($prodList)
               @foreach ($prodList as $product)
               <div class="product-container">
                 <div class="cover">
                   <img src="/storage/{{$product->foto}}"" alt="" witdh="223" height="281">
                 </div>
                 <div class="price">
-                  {{$product->price}}
+                  ${{$product->price}}
                 </div>
                 <div class="buynow">
-                  {{-- <input type="submit" name="buynow" value="COMPRAR AHORA"> --}}
                   <form method="get" action="/products/{{$product->id}}">
                     <input type="submit" name="buynow" value="COMPRAR AHORA">
                   </form>
                 </div>
               </div>
               @endforeach
+              @endif
 
           </div>
           </div>
